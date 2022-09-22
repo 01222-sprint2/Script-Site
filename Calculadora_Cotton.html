@@ -28,8 +28,88 @@
     </div>
     <h2>Formúlario Safra</h2>
     <div id="div_saf">
-        
+        <select id="sel_opcao" onchange="mostrar()">
+            <option value="0">--Selecione como quer fazer o cálculo</option>
+            <option value="com">Com amostra</option>
+            <option value="sem">Sem amostra</option>
+        </select>
+        <br>
+        <pre id="pre_msg" style="text-align:center; font-family: sans-serif; font-size: medium;">
+            Para a medição da sua capacidade total de produtividade, iremos solicitar uma medição de amostra para poder darmos uma estimativa mais condizente a realidade de sua lavoura. 
+            O cálculo será feito em um metro de amostra, por isso tire as seguintes medidas:
+        </pre>
+        <span id="span_inputs">
+        </span>
+        <pre id="pre_res" style="text-align:center; font-family: sans-serif; font-size: medium;"></pre>
     </div>
+
 </body>
 
 </html>
+<script>
+    function mostrar() {
+        var opcao = sel_opcao.value
+        if (opcao == '0') {
+            pre_msg.innerHTML = ''
+            span_inputs.innerHTML = ''
+        } else if (opcao == 'com') {
+            pre_msg.innerHTML = `Para a medição da sua capacidade total de produtividade, iremos solicitar uma medição de amostra para poder darmos uma estimativa mais condizente a realidade de sua lavoura. 
+            O cálculo será feito em um metro de amostra, por isso tire as seguintes medidas:`
+            span_inputs.innerHTML = `<br>
+            Informe o número de capulhos coletados em um metro de amostra:
+            <input type="text" id="ipt_ncapulhos" placeholder="Quantidade de capulhos"> <br><br>
+            Informe o peso desta amostra:
+            <input type="text" id="ipt_pesoam" placeholder="Peso em gramas"> <br><br>
+            Informe o espaçamento entre a cultura:
+            <input type="text" id="ipt_espacamento" placeholder="Espaçamento em centímetros"> <br><br>
+            Informe quantos hectares de lavoura você possui:
+            <input type="text" id="ipt_hectares" placeholder="Quantidade de hectares"> <br><br>
+            Porcentagem de perda que você deseja simular: <select id="sel_porc">
+                                                              <option value="0">--Selecione a porcentagem</option>
+                                                              <option value="15">15%</option>
+                                                              <option value="20">20%</option>
+                                                              <option value="25">25%</option>
+                                                              <option value="30">30%</option>
+                                                              <option value="35">35%</option>
+                                                          </select>
+            <br><br>
+            <button onclick="calcular()">Simular</button>
+            <br>`
+        }
+    }
+
+    function calcular() {
+        var numCapulhos = Number(ipt_ncapulhos.value)
+        var pesoAmostra = Number(ipt_pesoam.value)
+        var espacamento = Number(ipt_espacamento.value) / 100
+        var hectares = Number(ipt_hectares.value)
+        var porcentagem = sel_porc.value
+        var perda = 0
+
+        // peso em gramas dos capulhos (usando 5.5g como valor base)
+        var pesoCapulhos = numCapulhos * 5.5
+
+        // cálculo da qtd de metros lineares desses hectares
+        var metrosLineares = (hectares * 10000 / espacamento).toFixed(2)
+
+        // peso em KG das amostras (utilizando 5.5g como valor base para o peso)
+        // var pesoKgAmostras = (pesoCapulhos * metrosLineares / 1000).toFixed(2)
+
+        // peso em @ das amostras (utilizando o peso da amostra do input como base)
+        var pesoArrobasAmostras = (pesoAmostra * metrosLineares / 15000).toFixed(2)
+
+        //calculando os 35% das perdas devido ao monitoramento precário de umidade e temperatura
+        perda = pesoArrobasAmostras * porcentagem / 100
+
+        pre_res.innerHTML = `<h1>Expectativa para a sua safra sem a CottonTech</h1>
+                             Sua produtividade estimada seria de ${pesoArrobasAmostras}@ de algodão em toda a safra
+                             <br>Por hectar, você teria uma colheita de ${(pesoArrobasAmostras / hectares).toFixed(2)}@/hectar
+                             <br>Porém, caso não ocorra um monitoramento e consequentemente a manutenção adequada dos níveis de umidade e temperatura   da sua lavoura,
+                             você corre o risco de perder aproximadamente ${porcentagem}% dessa colheita, que seria em torno de ${perda.toFixed(2)}@ de algodão.`
+
+        pre_res.innerHTML += `<h1>Expectativa para a sua safra com a nossa solução</h1>`
+
+        pre_res.innerHTML += `<h1>Projeção para anos futuros</h1>`
+                              
+    }
+</script>
