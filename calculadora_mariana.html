@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador</title>
+</head>
+<center>
+<body>
+    <h1 style="text-align: center;">Projeção de Safra - CottonAnalytics</h1> <br>
+
+    <div id="div_Contexto">
+        <p style="text-align:center; font-family: sans-serif; font-size: medium;">
+            O fungo chamado ramulária é um dos maiores inimigos da produção de algodão <br>
+            e é favorecido por condições de alta umidade, temperaturas entre 25℃ e 30℃. <br>
+            Na safra 2019/2020, o fungo causou um prejuízo de R$ 1,89 bilhões ao setor <br>
+            tendo o potencial de perda das lavouras de algodão em 35%.
+        </p>
+    </div>
+
+    <h2 style="display: none;">Formúlario Pessoal</h2>
+    <div id="div_form" style="display: none;">
+        Nome: <input type="text" id="ipt_Nome" autofocus placeholder="Nome"> <br><br>
+        Sobrenome: <input type="text" id="ipt_Sobrenome" placeholder="Sobrenome"> <br><br>
+        Nome da Empresa que atua: <input type="text" id="ipt_Empresa" placeholder="Empresa"> <br><br>
+        Nome responsavel: <input type="text" id="ipt_Resp" placeholder="Nome Responsavel"><br><br>
+        E-mail: <input type="text" id="ipt_Email" placeholder="E-mail"> <br><br>
+        Telefone(cel): <input type="text" id="ipt_Tel" placeholder="Telefone Cel"> <br><br>
+    </div>
+
+    <div id="div_saf" style="display: block;">
+        <br>
+            <pre id="pre_msg" style="text-align:center; font-family: sans-serif; font-size:large;">
+                <b>Para a medição da sua capacidade total de produtividade, iremos solicitar alguns dados:</b>
+            </pre>
+            Informe a quantidade em @(15kg) de plumas de algodão produzidas:
+            <input type="text" id="ipt_pesoA" placeholder="Insira o peso em @"> <br><br>
+            Informe quantos hectares de lavoura você possui:
+            <input type="text" id="ipt_hectares" placeholder="Insira em hectares"> <br><br>
+            Informe por quanto vendeu por @(15kg) de algodão:
+            <input type="text" id="ipt_ValorA" placeholder="Insira o preço por @"> <br><br>
+            
+            Porcentagem de perda que você deseja simular: 
+            <select id="sel_porc">
+                <option value="0">Selecione a porcentagem</option>
+                <option value="15">15%</option>
+                <option value="20">20%</option>
+                <option value="25">25%</option>
+                <option value="30">30%</option>
+                <option value="35">35%</option>
+            </select>
+            <br><br>
+            <button onclick="calcular2()">Simular</button>
+        </div>
+
+    <pre id="pre_res" style="text-align:center; font-family: sans-serif; font-size: medium;">
+    </pre>
+    <br>
+        
+</body>
+</center>
+</html>
+<script>
+    // var globais
+    var pesoArrobasAmostras = 0;
+    var hectares = 0;
+    var porcentagem = 0;
+    var aux_perda = 0;
+    var valor_total = 0;
+
+    function calcular2(){
+
+        var valor = Number(ipt_ValorA.value);
+        hectares = Number(ipt_hectares.value);
+
+        porcentagem = sel_porc.value
+        pesoArrobasAmostras = ipt_pesoA.value
+        
+        perda = pesoArrobasAmostras * porcentagem / 100
+        valor_total = pesoArrobasAmostras * valor
+        aux_perda = perda * valor
+
+        div_saf.style.display = "none";
+        exibir()
+    }
+    
+    function exibir() {
+        pre_res.innerHTML = 
+        `<br><br><h1>Expectativa para a sua safra sem a CottonTech</h1>
+        Sua produtividade estimada seria de ${pesoArrobasAmostras}@ de algodão em toda a safra<br>
+        Por hectar, você teria uma colheita de ${(pesoArrobasAmostras / hectares).toFixed(2)}@/hectar,
+        o que indica um deficit de ${aux_perda.toFixed(2)} em receita bruta. <br>
+        Contudo, essa perda pode ser contornada usando nossos produtos, fazendo assim você receber o retorno total esperado de R$${valor_total.toFixed(2)}<br><br>`
+
+        pre_res.innerHTML += 
+        `<h1>Projeção para anos futuros com ${porcentagem}% de perda</h1>
+        Em 2 safras você deixa de receber R$${(2*aux_perda).toFixed(2)}, que poderiam ser revertidos e agregar a uma receita bruta de R$${(2*valor_total).toFixed(2)} 
+        Em 4 safras você deixa de receber R$${(4*aux_perda).toFixed(2)}, que poderiam ser revertidos e agregar a uma receita bruta de R$${(4*valor_total).toFixed(2)} 
+        Em 7 safras você deixa de receber R$${(7*aux_perda).toFixed(2)}, que poderiam ser revertidos e agregar a uma receita bruta de R$${(7*valor_total).toFixed(2)}
+        Em 10 safras você deixa de receber R$${(10*aux_perda).toFixed(2)}, que poderiam ser revertidos e agregar a uma receita bruta de R$${(10*valor_total).toFixed(2)}`
+    }
+    
+</script>
