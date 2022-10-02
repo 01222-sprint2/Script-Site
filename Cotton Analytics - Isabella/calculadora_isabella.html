@@ -16,7 +16,7 @@
     <br><br>
     Informe o faturamento por hectare : <input class="input" type="text" placeholder="em reais" id="faturamento_">
     <br><br>
-    Informe o número de hectares: <input class="input" type="text" id="hectares_">
+    Informe o número de hectares da sua fazenda: <input class="input" type="text" id="hectares_">
     <br><br>
     <button onclick="calc()">Calcule o lucro da solução</button>
 
@@ -37,9 +37,12 @@
         var faturamento = Number(faturamento_.value)
         var hectares = Number(hectares_.value)
         /*faturamento = quanto ele fatura em reais mais 50% sobre a perda, da nossa solução sobre a perda */
-        var ganho_hectare = (faturamento * porcentagem)
 
-        var ganho_total = (faturamento * porcentagem) * hectares
+        var faturamentoComSolucao = faturamento * (porcentagem / 100)
+
+        var ganho_hectare = faturamento + faturamentoComSolucao
+
+        var ganho_total =  ganho_hectare * hectares
 
         var faturamento_sem = faturamento * hectares
 
@@ -59,15 +62,20 @@
 
                     div_msg.innerHTML = `
 
-            <br>Sabemos que 5% de perda da colheita por hectare  é natural , mas você está perdendo ${porcentagem_.value}% <br>
+                   <br> O fungo chamado ramulária é um dos maiores inimigos da produção de algodão <br>
+                e é favorecido por condições de <b>alta umidade e em temperaturas entre 25℃ e 30℃</b>. <br>
+                Na safra 2019/2020, o fungo causou um prejuízo de R$ 1,89 bilhões ao setor <br>
 
-            <h2>Com a solução Cotton M2!</h2>
             
-            <p>Com nossa solução garantimos ${porcentagem.toFixed(2)}% a mais de aproveitamento de materia prima por hectare da sua colheita. <br>
+
+            <h2>Com a solução Cotton M20!</h2>
+            
+            <p>Com o nosso monitoramento e tomadas de ação por conta do agricultor <br>
+                garantimos ${porcentagem.toFixed(2)}% a mais de aproveitamento de materia prima por hectare da sua colheita. <br>
                    <br>
 
                 
-                Com isso, seu novo faturamento é de R$${ganho_hectare.toFixed(2)}, por hectare, <br>
+                Com isso, seu novo faturamento é de R$${ganho_hectare.toFixed(2)} por hectare, <br>
                 ou seja uma adição de 
                 50% em cima da sua porcentagem de perda <br>
 
