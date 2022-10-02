@@ -3,41 +3,61 @@ body {
 }
 
 .container .primeiro_h1 {
-    border: solid 3px orangered;
+    font-size: 35px;
+    margin-left: 145px;
+    margin-top: 40px;
 
 }
 
-.container {
-    border: solid 3px firebrick;
-    width: 1343px;
+.header .container {
+    background-color: #0D7980;
+    justify-content: space-between;
+    width: 1728px;
+    height: 138px;
     display: flex;
 
 
 }
 
 .container .nav {
-    border: solid 3px green;
-    width: 600px;
+    width: 970px;
+    height: 80px;
     display: flex;
     justify-content: center;
+    margin-right: 145px;
 
 
 }
 
 .nav li {
-    border: solid 3px rebeccapurple;
-    padding: 15px;
+
+    list-style-type: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    padding: 20px;
     margin: 3px;
     align-items: center;
     justify-content: center;
 
 }
 
+
+.banner .container h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 90px;
+    color: black;
+}
+
+
+
 .banner .container {
-    border: solid 3px blue;
-    background-image: url(https://img.freepik.com/fotos-premium/ramo-de-algodao-florescendo-na-mesa_23-2148287624.jpg?w=2000);
-    width: 1343px;
-    height: 300px;
+
+    background-image:
+        url(https://img.freepik.com/fotos-premium/ramo-de-algodao-florescendo-na-mesa_23-2148287624.jpg?w=2000);
+    width: 1728px;
+    height: 424px;
 }
 
 
@@ -46,6 +66,9 @@ body {
 
 
 .conteudo .container {
+    width: 1728px;
+    height: 527px;
+    border: solid 3px #0D7980;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,24 +76,33 @@ body {
 }
 
 .conteudo .container #img_solucao {
-    width: 400px;
+    width: 599px;
+    height: 366px;
 
 }
 
 .conteudo p {
-    width: 380px;
     text-align: justify;
     flex-direction: column;
+    font-size: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.conteudo_column {
+    width: 768px;
+    height: 390px;
 }
 
 .conteudo h2 {
+    font-size: 80px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: left;
 
 
 }
 
 .conteudo_column {
-    border: solid 3px lightcoral;
     flex-direction: column;
 }
 
@@ -80,19 +112,26 @@ body {
 
 
 .social .container {
-    margin-top: 100px;
-    border: solid 3px olivedrab;
-    width: 1343px;
+    width: 1728px;
+    height: 556;
     display: flex;
     justify-content: center;
 
 }
 
+.social p {
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
 
 .social .container .box {
-    border: solid 3px purple;
-    width: 350px;
-    margin: 5px;
+    border-radius: 10px;
+    background-color: #A7BDBD;
+    width: 456px;
+    height: 515px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -101,16 +140,23 @@ body {
 }
 
 .social .container .box img {
-    border: solid 3px khaki;
-    width: 180px;
+    width: 234px;
+    height: 160px;
 
+}
 
+.social h4 {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .social .boxes {
     border: solid 3px lawngreen;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 1728px;
+    height: 644px;
 
 }
 
@@ -126,15 +172,21 @@ body {
 
 .contato .container {
     border: solid 3px crimson;
-    width: 300px;
-    display: flex;
+    width: 364px;
+    height: 560px;
     flex-direction: column;
-    
+    justify-items: center;
+
 
 }
 
 .contato .inputs {
-    border: solid 3px salmon;
+    
+    color : white;
+    width: 458;
+    height: 62px;
+    border-radius: 10px;
+    background-color: #19403C;
     padding: 5px;
     margin: 5px;
 
@@ -142,10 +194,10 @@ body {
 
 
 
-.footer .container{
-    border: solid 3px aqua;
-    height: 120px;
-    width: 1343px;
+.footer .container {
+    background-color: #0D7980;
+    height: 346px;
+    width: 1728px;
     margin-top: 2px;
 
 }
