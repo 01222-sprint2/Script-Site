@@ -1,4 +1,4 @@
-body {
+body { width: 1440px;
     margin: 0px;
     background-image: url(https://raw.githubusercontent.com/CottonAnalytics/Script-Site-Calculadora/f526ed948d712c9fe99e3a34eaf4bf548b63226a/Imagens-Site/SVG/backgorund_vetor.svg);
 }
@@ -12,7 +12,7 @@ body {
 .header .container {
     background-color: #0D7980;
     justify-content: space-between;
-    width: 1728px;
+    width: 1440px;
     height: 138px;
     display: flex;
 
@@ -59,7 +59,7 @@ body {
     background-image:
         url(https://img.freepik.com/fotos-premium/ramo-de-algodao-florescendo-na-mesa_23-2148287624.jpg?w=2000);
 
-    width: 1728px;
+    width: 1440px;
     height: 424px;
 }
 
@@ -68,7 +68,7 @@ body {
 
 
 .conteudo .container {
-    width: 1728px;
+    width: 1440px;
     height: 527px;
     display: flex;
     justify-content: center;
@@ -113,7 +113,7 @@ body {
 
 
 .social .container {
-    width: 1728px;
+    width: 1440px;
     height: 556;
     display: flex;
     justify-content: center;
@@ -164,7 +164,7 @@ body {
 
 
 .contato {
-    width: 1728px;
+    width: 1440px;
     height: 720px;
     border: solid 3px rgb(0, 255, 21);
     margin-bottom: 50px;
@@ -184,7 +184,7 @@ body {
     justify-content: center;
 
     border: solid 3px crimson;
-    width: 1728px;
+    width: 1440;
     height: 674px;
     flex-direction: column;
 }
@@ -223,7 +223,7 @@ body {
 .footer .container {
     background-color: #0D7980;
     height: 346px;
-    width: 1728px;
+    width: 1440px;
     margin-top: 2px;
 
 }
