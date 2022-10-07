@@ -62,3 +62,4 @@ select sensor.idsensor, sensor.statusSensor, hectares.idhectares , empresa.nomeE
 join empresa on fkEmpresa = idempresa;
 
 
+drop database Sprint2Oficial;
