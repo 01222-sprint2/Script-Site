@@ -1,36 +1,54 @@
-body { width: 80%;
-    
-    
-    background-image: url(https://raw.githubusercontent.com/CottonAnalytics/Script-Site-Calculadora/f526ed948d712c9fe99e3a34eaf4bf548b63226a/Imagens-Site/SVG/backgorund_vetor.svg) ;
+* {
+    padding: 0px;
+    margin: 0px;
 }
 
 
 
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+#back {
+    
+    background-image: url(https://raw.githubusercontent.com/CottonAnalytics/Script-Site-Calculadora/f526ed948d712c9fe99e3a34eaf4bf548b63226a/Imagens-Site/SVG/backgorund_vetor.svg);
+}
 
 .container .primeiro_h1 {
     font-size: 35px;
-    margin-left: 145px;
+    padding: 20px 20px 20px 0px;
     color: white;
 
 }
 
-.header .container {
+.header {
     background-color: #0D7980;
+    height: fit-content;
+    color: white;
+}
+
+.header .container {
     justify-content: space-between;
     align-items: center;
-    width: 1440px;
-    height: 138px;
     display: flex;
 
 
 }
 
-.container .nav {
-    width: 970px;
-    height: 80px;
+.nav {
+    width: 1200px;
+    height: fit-content;
     display: flex;
     justify-content: center;
-    margin-right: 114px;
+    align-items: center;
+}
+
+
+.container .nav {
+    display: flex;
+    justify-content: space-around;
+
 
 
 }
@@ -38,51 +56,59 @@ body { width: 80%;
 .nav li {
     list-style-type: none;
     color: white;
-    font-size: 30px;
-    padding: 20px;
-    margin: 3px;
-    align-items: center;
-    justify-content: center;
+    font-size: 20px;
+
+
+
+
 
 }
 
 /*Banner*/
-
-.banner .container #frase_solucao {
-   
-    text-align: center;
-    font-size: 90px;
+.banner {
     color: white;
+    background-image:
+        url(https://img.freepik.com/fotos-premium/ramo-de-algodao-florescendo-na-mesa_23-2148287624.jpg?w=2000);
+    height: 424px;
 }
-
 
 .banner .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image:
-        url(https://img.freepik.com/fotos-premium/ramo-de-algodao-florescendo-na-mesa_23-2148287624.jpg?w=2000);
-
-
-    width: 1440px;
-    height: 424px;
 }
 
-#opacidade{
-    width: 1440px;
-    background-color: #19403C;
-}
+    .banner .container #frase_solucao {
+
+        text-align: center;
+        font-size: 90px;
+
+    }
+
+
+
+
+
+
+
 
 
 /*conteudo*/
 
-
-.conteudo .container {
-    width: 1440px;
+.conteudo{
+    
     height: 527px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    
+}
+
+.conteudo .container {
+    
+    justify-content: space-between;
+    display: flex;
+    
+    
 
 }
 
@@ -93,10 +119,13 @@ body { width: 80%;
 }
 
 .conteudo p {
+    
     text-align: justify;
     flex-direction: column;
-    font-size: 35px;
-   
+    font-size: 25px;
+    height: 251px;
+    width: 623px;
+
 }
 
 .conteudo_column {
@@ -120,7 +149,7 @@ body { width: 80%;
 
 
 .social .container {
-    width: 1440px;
+
     height: 556;
     display: flex;
     justify-content: center;
@@ -154,7 +183,7 @@ body { width: 80%;
 
 .social h4 {
     font-size: 30px;
-    
+
 }
 
 .social .boxes {
@@ -170,14 +199,10 @@ body { width: 80%;
 
 
 .contato {
-    width: 1440px;
-    height: 720px;
-    border: solid 3px rgb(0, 255, 21);
-    margin-bottom: 50px;
-    display: flex;
-    justify-items: center;
-    justify-content: center;
 
+    height: 720px;
+
+    margin-bottom: 50px;
 }
 
 .contato .container h2 {
@@ -187,17 +212,18 @@ body { width: 80%;
 
 .contato .container {
     display: flex;
-    justify-content: center;
-    border: solid 3px crimson;
-    width: 1440px;
-    height: 674px;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    height: 674px;
 }
 
 .input {
     width: 500px;
     height: 450px;
-    border: solid 3px #ff2fe3;
+
 
 }
 
@@ -225,25 +251,31 @@ body { width: 80%;
 
 /*footer*/
 
+.footer{
+    background-color: #0D7980;
+    
+    height: 288px;
+}
+
 .footer .container {
     background-color: #0D7980;
-    height: 288px;
-    width: 1440px;
+
+
     margin-top: 2px;
 }
 
-.footer .container{
+.footer .container {
     flex-direction: column;
     align-items: center;
 }
 
-.container .nav_footer{
+.container .nav_footer {
     width: 970px;
     height: 80px;
     display: flex;
     justify-content: center;
-   
-    
+
+
 
 }
 
@@ -258,10 +290,10 @@ body { width: 80%;
     justify-content: center;
 }
 
-.ultimo_h1{
+.ultimo_h1 {
     font-size: 35px;
     margin-left: 145px;
     color: white;
-    
+
 
 }
