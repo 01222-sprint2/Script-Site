@@ -1,61 +1,90 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@900&family=Cairo&family=Questrial&family=Leckerli+One&family=Quicksand:wght@700&display=swap%27');
+
+body{
+    font-family: sans-serif;
     margin: 0;
-    margin-top: 0;
-     font-family: 'Poppins', sans-serif;
-    background-image: url(algodao.webp);
-    background-size: cover;
-   background-repeat: no-repeat;
-
+    background-color: #000000;
 }
-
-.header {
+.header{
     background-color: #0D7980;
-    color: white;
-}
-
-.container1 {
-    width: 1440px;
-height: 114px;
-left: 0px;
-top: 0px;
-}
-
-
-.header .container1 {
-    width: 1440px;
     height: 114px;
-    left: 0px;
-    top: 0px;
-    
+    color: #ffffff;
 }
 
-
-.header ul #aqui {
-    font-weight: 1000;
-    color: #32b9cd;
+/* Respiro da Página, margin auto para o sistema do pc que decidir como fica a alteração */
+.container{
+    margin: auto;
+    width: 80%;
 }
 
-.navbar {
+.header .container{
     display: flex;
-    width: 600px;
+    justify-content: space-between;
+    height: 100%;
+}
+.nome_Empresa{
+    display: flex;
+}
+
+.nome_Empresa #span1{
+    font-family: 'Quicksand';
+    src: url('Fonte/Quicksand-Regular.ttf') format('truetype');
+    font-size: 35px;
+    font-weight: 700;
+    margin-top:  8px;
+    align-self: center;
+
+}
+
+.nome_Empresa #span2{
+    font-family: 'Leckerli One', cursive;
+    src: url('Fonte/LeckerliOne-Regular.ttf') format('truetype');
+    font-size: 36px;
+    font-weight: 700;
+    margin-top:  8px;
+    align-self: center;
+}
+
+.navbar{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 24px;
+    display: flex;
     justify-content: space-around;
     list-style: none;
     align-items: center;
+    margin-top: 30px;
+    width: 700px;
+    color: #FFFFFF;
+
 }
 
-.conteiner2 {
-    width: 614px;
-    height: 858px;
-    left: 413px;
-    top: 300px;
-    display: flex;
-    justify-content: center;
+.navbar .agora{
+    font-weight: 1000;
+}
+.navbar a{
+    color: #000;
+    text-decoration: none;
+}
+
+.banner{
+    height: 800px;
+    background-image: url(algodao.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
     
 }
 
+.banner .conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 780px;
+}
+
 .form-cadas {
+
     background: rgba(0, 0, 0, 0.6);
-    align-self: center;
     height: 450px;
     width: 344px;
     display: flex;
@@ -110,42 +139,62 @@ button {
     border-style: none;
 }
 
-.footer {
-    position: absolute;
-    width: 100%;
-    height: 190px;
-    left: 0px;
-    background: #0D7980;
-}
 
-.footer1{
-    width: 1442px;
+.footer{
+    color: #fff;
+    background-color: #0D7980;
     height: 288px;
-    margin-top: 30px;
-    float: right;
-    margin-right: 810px;
+    align-items: center;
+
+}
+.footer .container{
+    font-family: sans-serif ;
+    font-size: small;
+    display: flex;
     justify-content: center;
-    display: flex;
-    color: white;
+    align-items: center;
+    flex-direction: column;
 }
-
-.footer2{
-   margin-left: 570px;
-    width: 1442px;
-    height: 288px;
-    right: 273px;
-    bottom: 25px;
+.footer .contato{
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 88%;
+   }
+.logo #span1{
     font-family: 'Quicksand';
-    font-style: normal;
+    src: url('Fonte/Quicksand-Regular.ttf') format('truetype');
+    font-size: 35px;
+    font-weight: 700;
+    margin-top:  8px;
+    align-self: center;
+
+}
+.logo #span2{
+    font-family: 'Leckerli One', cursive;
+    src: url('Fonte/LeckerliOne-Regular.ttf') format('truetype');
+    font-size: 36px;
+    font-weight: 700;
+    margin-top:  8px;
+    align-self: center;
+}
+.footer .container .navbar {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 24px;
     display: flex;
-    align-items: center;  
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    margin-top: 30px;
+    width: 700px;
     color: #FFFFFF;
 }
-
-.footer3{
-    width: 1442px;
-    height: 288px;
-    display: flex;
-    align-items: center;  
-    color: #FFFFFF;
+.footer .container #span3 {
+    font-family: 'Montserrat';
+    font-size: 30px;
+}
+.footer .logo {
+    margin-top: 3%;
 }
