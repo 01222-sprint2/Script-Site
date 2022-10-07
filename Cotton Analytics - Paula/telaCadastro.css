@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    font-family: 'Inria Sans';
+    margin-top: 0;
+     font-family: 'Poppins', sans-serif;
     background-image: url(algodao.webp);
     background-size: cover;
    background-repeat: no-repeat;
@@ -12,15 +13,20 @@ body {
     color: white;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
+.container1 {
+    width: 1440px;
+height: 114px;
+left: 0px;
+top: 0px;
 }
 
 
-.header .container {
-    display: flex;
-    justify-content: space-between;
+.header .container1 {
+    width: 1440px;
+    height: 114px;
+    left: 0px;
+    top: 0px;
+    
 }
 
 
@@ -37,27 +43,29 @@ body {
     align-items: center;
 }
 
-.conteiner {
+.conteiner2 {
+    width: 614px;
+    height: 858px;
+    left: 413px;
+    top: 300px;
     display: flex;
     justify-content: center;
-    height: 600px;
+    
 }
 
 .form-cadas {
     background: rgba(0, 0, 0, 0.6);
     align-self: center;
     height: 450px;
-    width: 390px;
+    width: 344px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     border-radius: 4px;
     padding-bottom: 50px;
-    left: 557px;
-    top: 286px;
     background: rgba(35, 89, 89, 0.7);
-    border-radius: 15px;
+    border-radius: 10px;
+   
 }
 
 
@@ -74,11 +82,12 @@ body {
     flex-direction: column;
     justify-content: center;
     width: 250px;
+    color: white;
 }
 
 .formulario input {
     padding: 7px 10px;
-    width: 220px;
+    width: 240px;
     height: 12px;
     border-style: none;
     border-radius: 100px;
@@ -88,16 +97,6 @@ body {
     margin-top: 25px;
 }
 
-
-.formulario span {
-    font-family: 'Quicksand';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 40px;
-    display: flex;
-    color: white;
-}
 
 button {
     width: 103px;
@@ -120,8 +119,8 @@ button {
 }
 
 .footer1{
-    width: 200px;
-    height: 40px;
+    width: 1442px;
+    height: 288px;
     margin-top: 30px;
     float: right;
     margin-right: 810px;
@@ -132,8 +131,8 @@ button {
 
 .footer2{
    margin-left: 570px;
-    width: 263px;
-    height: 48px;
+    width: 1442px;
+    height: 288px;
     right: 273px;
     bottom: 25px;
     font-family: 'Quicksand';
@@ -144,8 +143,8 @@ button {
 }
 
 .footer3{
-    margin-left: 490px;
-    margin-top: 75px;
+    width: 1442px;
+    height: 288px;
     display: flex;
     align-items: center;  
     color: #FFFFFF;
