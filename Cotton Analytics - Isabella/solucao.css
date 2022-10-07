@@ -1,17 +1,23 @@
-body { width: 1440px;
-    margin: 0px;
-    background-image: url(https://raw.githubusercontent.com/CottonAnalytics/Script-Site-Calculadora/f526ed948d712c9fe99e3a34eaf4bf548b63226a/Imagens-Site/SVG/backgorund_vetor.svg);
+body { width: 80%;
+    
+    
+    background-image: url(https://raw.githubusercontent.com/CottonAnalytics/Script-Site-Calculadora/f526ed948d712c9fe99e3a34eaf4bf548b63226a/Imagens-Site/SVG/backgorund_vetor.svg) ;
 }
+
+
+
 
 .container .primeiro_h1 {
     font-size: 35px;
     margin-left: 145px;
+    color: white;
 
 }
 
 .header .container {
     background-color: #0D7980;
     justify-content: space-between;
+    align-items: center;
     width: 1440px;
     height: 138px;
     display: flex;
@@ -24,16 +30,14 @@ body { width: 1440px;
     height: 80px;
     display: flex;
     justify-content: center;
-    margin-right: 145px;
+    margin-right: 114px;
 
 
 }
 
 .nav li {
-
     list-style-type: none;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     padding: 20px;
     margin: 3px;
@@ -45,10 +49,10 @@ body { width: 1440px;
 /*Banner*/
 
 .banner .container #frase_solucao {
-    font-family: Arial, Helvetica, sans-serif;
+   
     text-align: center;
     font-size: 90px;
-    color: rgb(0, 0, 0);
+    color: white;
 }
 
 
@@ -59,8 +63,14 @@ body { width: 1440px;
     background-image:
         url(https://img.freepik.com/fotos-premium/ramo-de-algodao-florescendo-na-mesa_23-2148287624.jpg?w=2000);
 
+
     width: 1440px;
     height: 424px;
+}
+
+#opacidade{
+    width: 1440px;
+    background-color: #19403C;
 }
 
 
@@ -77,8 +87,8 @@ body { width: 1440px;
 }
 
 .conteudo .container #img_solucao {
-    width: 599px;
-    height: 366px;
+    width: 500px;
+    height: 306px;
 
 }
 
@@ -86,20 +96,17 @@ body { width: 1440px;
     text-align: justify;
     flex-direction: column;
     font-size: 35px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+   
 }
 
 .conteudo_column {
-    width: 768px;
-    height: 390px;
+    width: 623px;
+    height: 333px;
 }
 
 .conteudo h2 {
-    font-size: 80px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 70px;
     text-align: left;
-
 
 }
 
@@ -121,8 +128,7 @@ body { width: 1440px;
 }
 
 .social p {
-    font-size: 32px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
     padding: 10px;
 }
 
@@ -130,8 +136,8 @@ body { width: 1440px;
 .social .container .box {
     border-radius: 10px;
     background-color: #A7BDBD;
-    width: 456px;
-    height: 515px;
+    width: 381px;
+    height: 430px;
     margin: 10px;
     display: flex;
     justify-content: center;
@@ -141,14 +147,14 @@ body { width: 1440px;
 }
 
 .social .container .box img {
-    width: 234px;
-    height: 160px;
+    width: 195px;
+    height: 127.px;
 
 }
 
 .social h4 {
     font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 .social .boxes {
@@ -170,11 +176,11 @@ body { width: 1440px;
     margin-bottom: 50px;
     display: flex;
     justify-items: center;
+    justify-content: center;
 
 }
 
 .contato .container h2 {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
     text-align: center;
 }
@@ -182,9 +188,8 @@ body { width: 1440px;
 .contato .container {
     display: flex;
     justify-content: center;
-
     border: solid 3px crimson;
-    width: 1440;
+    width: 1440px;
     height: 674px;
     flex-direction: column;
 }
@@ -222,8 +227,41 @@ body { width: 1440px;
 
 .footer .container {
     background-color: #0D7980;
-    height: 346px;
+    height: 288px;
     width: 1440px;
     margin-top: 2px;
+}
+
+.footer .container{
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .nav_footer{
+    width: 970px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+   
+    
+
+}
+
+
+.nav_footer li {
+    list-style-type: none;
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    margin: 3px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ultimo_h1{
+    font-size: 35px;
+    margin-left: 145px;
+    color: white;
+    
 
 }
