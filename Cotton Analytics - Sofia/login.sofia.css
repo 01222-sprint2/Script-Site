@@ -38,7 +38,8 @@
  .banner {
      padding: 10vw 0;
      height: 50vh;
-     background-image: url("Imagens-Site/PNG/imagem_banner.jpg");
+     background-image: url("https://raw.githubusercontent.com/CottonAnalytics/Site-Calculadora/main/Arquivos%20Oficiais/Imagens-Site/PNG/imagem_banner.jpg");
+
      background-size: cover;
  }
 
