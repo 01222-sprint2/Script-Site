@@ -1,0 +1,61 @@
+.header {
+    background-color: #0D7980;
+    height: 114px;
+    color: #ffffff;
+}
+
+/* Respiro da Página, margin auto para o sistema do pc que decidir como fica a alteração */
+.container {
+    margin: auto;
+    width: 80%;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.nome_Empresa {
+    display: flex;
+}
+
+.nome_Empresa #span1 {
+    font-family: 'Quicksand';
+    font-size: 35px;
+    font-weight: 700;
+
+    align-self: center;
+
+}
+
+.nome_Empresa #span2 {
+    font-family: 'Leckerli One', cursive;
+    font-size: 36px;
+    font-weight: 500;
+  
+    align-self: center;
+}
+
+.header .navbar {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    margin-top: 30px;
+    width: 700px;
+    color: #FFFFFF;
+
+}
+
+.navbar .agora {
+    font-weight: 1000;
+}
+
+.navbar a {
+    color: #000;
+    text-decoration: none;
+}
