@@ -68,8 +68,12 @@ body {
     text-decoration: none;
 }
 
+.navbar_lateral li{
+    margin-top: 25px;
+}
+
 .banner {
-    height: 800px;
+    height: 779px;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: white;
@@ -120,10 +124,22 @@ body {
     margin-left: -80px;
 }
 
+
+button {
+    width: 253px;
+    height: 34px;
+    left: 700px;
+    align-self: center;
+    margin-top: 20px;
+    background: #A66038;
+    border-radius: 10px;
+    color: white;
+    border-style: none;
+}
+
 .legenda{
-    border: 1px solid red;
     width: 1250px;
-    height: 150px;
+    height: 170px;
     right: 10px;
     top:120px;
     position: absolute;
@@ -144,6 +160,111 @@ body {
     font-weight: 600;
 }
 
+.alertavermelho{
+    position: absolute;
+    border: 1px red solid;
+   background-color: red;
+    border-radius: 100px;
+    width: 38px;
+    height: 36px;
+    bottom: 120px;
+    right: 230px;
+}
+
+.alertalaranja{
+    position: absolute;
+   background-color: orangered;
+   border: 1px orangered solid;
+    border-radius: 100px;
+    width: 38px;
+    height: 36px;;
+    bottom: 120px;
+    right: 400px;
+}
+
+.alertaamarelo{
+    position: absolute;
+   background-color: yellow;
+   border: 1px yellow solid;
+    border-radius: 100px;
+    width: 38px;
+    height: 36px;
+    bottom: 120px;
+    right: 535px;
+}
+
+.alertaverde{
+    position: absolute;
+   background-color: green;
+   border: 1px green solid;
+    border-radius: 100px;
+    width: 38px;
+    height: 36px;
+    bottom: 120px;
+    right: 670px;
+}
+
+.alert{
+    position: absolute;
+    left: 1025px;
+    top: 10px;
+    display: flex;
+    font-family: 'Cairo';
+    font-size: 15pt;
+    font-weight: 1000;
+}
+
+.alert1{
+    position: absolute;
+    left: 855px;
+    top: 10px;
+    display: flex;
+    font-family: 'Cairo';
+    font-size: 15pt;
+    font-weight: 1000;
+}
+
+.alert2{
+    position: absolute;
+    left: 720px;
+    top: 10px;
+    display: flex;
+    font-family: 'Cairo';
+    font-size: 15pt;
+    font-weight: 1000;
+}
+
+.alert3{
+    position: absolute;
+    left: 585px;
+    top: 10px;
+    display: flex;
+    font-family: 'Cairo';
+    font-size: 15pt;
+    font-weight: 1000;
+}
+
+.fazenda{
+    position: absolute;
+    display: flex;
+    font-family: 'Cairo';
+    font-weight: 1000;
+    font-size: 25pt;
+}
+
+.fazenda .id1{
+    position: absolute;
+    display: flex;
+    right: 200px;
+    width: 145px;
+    height: 36;
+}
+
+.fazenda .id2{
+    position: absolute;
+    top: 290px;
+}
+
 .caixa{
     position: absolute;
     border: 1px solid red;
@@ -158,26 +279,29 @@ body {
     width: 300px;
     height: 200px;
     border: 1px solid red;
+    background-color: red;
     right: 850px;
-    top: 40px;
+    top: 60px;
 }
 
 .caixatopo2{
     position: absolute;
     width: 300px;
     height: 200px;
-    border: 1px solid red;
+    border: 1px solid orangered;
+    background-color: orangered;
     right: 475px;
-    top: 40px;
+    top: 60px;
 }
 
 .caixatopo3{
     position: absolute;
     width: 300px;
     height: 200px;
-    border: 1px solid red;
+    border: 1px solid yellow;
+    background-color: yellow;
     right: 100px;
-    top: 40px;
+    top: 60px;
 }
 
 
@@ -186,26 +310,29 @@ body {
     width: 300px;
     height: 200px;
     border: 1px solid red;
+    background-color: red;
     right: 850px;
-    top: 300px;
+    top: 350px;
 }
 
 .caixatopo5{
     position: absolute;
     width: 300px;
     height: 200px;
-    border: 1px solid red;
+    border: 1px solid yellow;
+    background-color: yellow;
     right: 475px;
-    top: 300px;
+    top: 350px;
 }
 
 .caixatopo6{
     position: absolute;
     width: 300px;
     height: 200px;
-    border: 1px solid red;
+    border: 1px solid yellow;
+    background-color: yellow;
     right: 100px;
-    top: 300px;
+    top: 350px;
 }
 .footer {
     color: #fff;
