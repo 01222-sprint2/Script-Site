@@ -1,0 +1,329 @@
+body {
+    margin: 0;
+}
+
+/* ==================================================== INICIO DO HEADER ========================================================= */
+.header {
+    background-color: #0D7980;
+    height: 114px;
+    color: #ffffff;
+}
+
+/* Respiro da Página, margin auto para o sistema do pc que decidir como fica a alteração */
+.container {
+    margin: auto;
+    width: 80%;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.nome_Empresa {
+    display: flex;
+}
+
+.nome_Empresa #span1 {
+    font-family: 'Quicksand';
+    font-size: 35px;
+    font-weight: 700;
+
+    align-self: center;
+
+}
+
+.nome_Empresa #span2 {
+    font-family: 'Leckerli One', cursive;
+    font-size: 36px;
+    font-weight: 500;
+
+    align-self: center;
+}
+
+.header .navbar {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    margin-top: 30px;
+    width: 700px;
+    color: #FFFFFF;
+
+}
+
+.navbar .agora {
+    font-weight: 1000;
+}
+
+.navbar a {
+    color: #000;
+    text-decoration: none;
+}
+/* ==================================================== FIM DO HEADER ========================================================= */
+
+
+/* ==================================================== INICIO DAS SECTIONS ========================================================= */
+.maior {
+    /* border: solid 5px pink; */
+    height: 900px;
+}
+
+.maior .container {
+    /* border: solid 7px green; */
+    height: 100%;
+    width: 90%;
+    margin: auto;
+}
+
+.full_section {
+    /* border: solid 10px blue; */
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* ==========================================INICIO DA LEFT SECTION=========================================================== */
+.left_section {
+    /* border: solid 10px yellow; */
+    width: 25%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    background-color: #D9D9D9;
+}
+
+.left_section .user {
+    /* border: solid 2px orange; */
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.user span {
+    margin-top: 15px;
+    /* border: solid 2px brown; */
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menus {
+    display: flex;
+    flex-direction: column;
+    /* border: solid 2px peru; */
+    list-style: none;
+    padding-left: 15px;
+    height: 100%;
+    align-items: left;
+    justify-content: space-evenly;
+}
+
+.menus li {
+    /* border: solid 2px violet; */
+    font-family: 'Montserrat';
+    font-size: 20px;
+}
+/* ==========================================FIM DA LEFT SECTION=========================================================== */
+
+
+/* ==========================================INICIO DA RIGHT SECTION=========================================================== */
+.right_section {
+    /* border: solid 10px greenyellow; */
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==================================================INICIO DOS INDICADORES========================================================== */
+.right_section .top_section {
+    /* border: solid 2px green; */
+    display: flex;
+    height: 7%;
+    justify-content: right;
+    align-items: center;    
+}
+
+.right_section .indicadores {
+    /* border: solid 2px blue; */
+    width: 70%;
+    display: flex;
+    margin: 0;
+    justify-content: space-evenly;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 600;
+    list-style: none;
+    /* padding: 20px; */
+    /* height: 8%; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: space-evenly; */
+}
+
+.indicadores img {
+    margin-right: 10px;
+}
+
+.indicadores li {
+    /* border: solid 2px black; */
+    display: flex;
+    align-items: center;
+}
+/* ====================================================FIM DOS INDICADORES========================================================== */
+
+/* ==================================================INICIO DA SENSOR SECTION========================================================== */
+.right_section .sensor_section {
+    /* border: 2px solid purple; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat';
+}
+
+.sensor_section h1 {
+    /* border: 2px solid salmon; */
+    margin: 10px 0;
+}
+
+.sensor_section .sensor_menus {
+    /* border: solid 2px darkblue; */
+    height: 100%;
+    width: 91%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sensor_menus h3 {
+    /* TEXTO: Sensor 1 */
+    /* border: solid 2px cyan; */
+    margin: 0 5% 2% 5%;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.sensor_menus .menu {
+    /* border: solid 10px violet; */
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 5%;
+    justify-content: space-between;
+}
+
+.menu .sensores {
+    /* border: solid 7px orange; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sensores .grafico {
+    /* border: solid 2px green; */
+    width: 250px;
+    height: 190px;
+}
+
+.menu span {
+    /* TEXTO: O sensor x entrou em estado crítico em relação à temperatura */
+    /* border: solid 5px blueviolet; */
+    /* margin-top: 5%; */
+    width: 450px;
+    text-align: center;
+    align-self: center;
+}
+
+/* #sens1temp {
+    border: solid 5px green;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+} */
+
+
+
+
+/* ==================================================FIM DA SENSOR SECTION========================================================== */
+
+
+
+
+
+/* ==================================================== FIM DAS SECTIONS ========================================================= */
+
+
+/* ==================================================== INICIO DO FOOTER ========================================================= */
+
+.footer {
+    color: #fff;
+    background-color: #0D7980;
+    height: 288px;
+}
+
+.footer .container {
+    font-family: sans-serif;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer .contato {
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 88%;
+}
+
+.logo #span1 {
+    font-family: 'Quicksand';
+    src: url('Fonte/Quicksand-Regular.ttf') format('truetype');
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 8px;
+    align-self: center;
+
+}
+
+.logo #span2 {
+    font-family: 'Leckerli One', cursive;
+    src: url('Fonte/LeckerliOne-Regular.ttf') format('truetype');
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 8px;
+    align-self: center;
+}
+
+.footer .container .navbar {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    margin-top: 30px;
+    width: 700px;
+    color: #FFFFFF;
+}
+
+.footer .container #span3 {
+    font-family: 'Montserrat';
+    font-size: 30px;
+}
+
+.footer .logo {
+    margin-top: 3%;
+}
+
+/* ==================================================== FIM DO FOOTER ========================================================= */
