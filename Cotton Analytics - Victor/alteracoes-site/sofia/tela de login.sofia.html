@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotton Analytics - Login</title>
+    <link rel="stylesheet" href="login.sofia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&family=Leckerli+One&family=Montserrat:wght@500&family=Questrial&family=Quicksand&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="container">
+            <!-- Fiz um nome composto então coloquei eles dentro de uma divisão própia no container -->
+            <div class="nome_Empresa">
+                <span id="span1">Cotton</span>
+                <span id="span2">Analytics</span>
+            </div>
+            <ul class="navbar">
+                <li class="agora">Home</li>
+                <li>Solução IoT</li>
+                <li>Simulador</li>
+                <li>Login</li>
+                <li>|</li>
+                <li>Cadastro</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <div class="banner">
+        <div class="container">
+            <div class="box_form">
+                <h1>Entrar</h1>
+                <div class="form">
+
+                    <input id="ipt_email" type="email" placeholder="Nome">
+
+                    <input id="ipt_password" type="password" placeholder="*******">
+
+                    <button>Entrar</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="banner">
+        <div class="container">
+            <div class="form-login">
+                <h1>Login:</h1>
+                <div class="formulario">
+                    <input id="ipt_email" type="email" placeholder="E-mail" autofocus>
+
+                    <input id="ipt_password" type="password" placeholder="*******">
+
+                    <button onclick="entrar()">Entrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="logo">
+                <span id="span1">Cotton</span>
+                <span id="span2">Analytics</span>
+            </div>
+            <ul class="navbar">
+                <li class="agora">Home</li>
+                <li>Solução IoT</li>
+                <li>Simulador</li>
+                <li>Login</li>
+                <li>|</li>
+                <li>Cadastro</li>
+            </ul>
+            <span id="span3">suport.cotton_analytics@gmail.com</span>
+            <!-- <div>
+                    Redes Sociais:
+                    <div class="redes">
+                    <img src="assets/facebook.png" alt="facebook" width="32px">
+                    <img src="assets/instagram.png" alt="Instagram" width="32px">
+                    <img src="assets/twitter.png" alt="Twitter" width="32px">
+                    </div>
+                </div> -->
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+function entrar() {
+    var user = ipt_email.value
+    var pass = ipt_password.value
+
+    if (user == '' || pass == '') {
+        alert("Preencha todos os campos!")
+    } else if (user != 'cottonanalytics@gmail.com' && pass != 'cottonanalytics') {
+        alert("Login e senha inválidos!")
+    } else {
+        alert("Logado com sucesso!")
+    }
+    ipt_email.value = ''
+    ipt_password.value = ''
+    ipt_email.focus()
+}
+</script>
