@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Montserrat:wght@500&family=Montserrat&family=Quicksand&family=Cairo:wght@900&family=Cairo&family=Questrial&family=Leckerli+One&family=Cairo:wght@700&family=Quicksand:wght@700&display=swap');
+
 body {
     margin: 0;
 }
@@ -67,8 +68,12 @@ body {
     text-decoration: none;
 }
 
-.navbar_lateral li{
+.navbar_lateral li {
     margin-top: 25px;
+}
+
+.aqui{
+    font-weight: 1000;
 }
 
 .banner {
@@ -96,13 +101,14 @@ body {
 
 }
 
-.usuario{
+.usuario {
     position: absolute;
-    border: #0D7980 solid 1px ;
+    border: #000000 solid 8px;
+    background-color: white;
     width: 160px;
     height: 160px;
     border-radius: 100px;
-    right: 140px; 
+    right: 140px;
     margin-top: 35px;
 }
 
@@ -135,11 +141,11 @@ button {
     border-style: none;
 }
 
-.legenda{
+.legenda {
     width: 1250px;
     height: 170px;
     right: 100px;
-    top:120px;
+    top: 120px;
     position: absolute;
 }
 
@@ -152,14 +158,14 @@ button {
 }
 
 
-.legenda #sinalizacao{
+.legenda #sinalizacao {
     font-family: 'Montserrat';
     font-size: 20px;
     justify-content: space-around;
     font-weight: 600;
 }
 
-.alertavermelho{
+.alertavermelho {
     position: absolute;
     background-color: #F91A1A;
     border-radius: 100px;
@@ -169,17 +175,18 @@ button {
     right: 210px;
 }
 
-.alertalaranja{
+.alertalaranja {
     position: absolute;
     background-color: #FF7E47;
     border-radius: 100px;
     width: 38px;
-    height: 36px;;
+    height: 36px;
+    ;
     bottom: 120px;
     right: 400px;
 }
 
-.alertaamarelo{
+.alertaamarelo {
     position: absolute;
     background-color: #F8D51F;
     border-radius: 100px;
@@ -189,9 +196,9 @@ button {
     right: 535px;
 }
 
-.alertaverde{
+.alertaverde {
     position: absolute;
-    background-color:#52FF00;
+    background-color: #52FF00;
     border-radius: 100px;
     width: 38px;
     height: 36px;
@@ -243,7 +250,7 @@ button {
     margin-left: 25px;
 }
 
-.fazenda{
+.fazenda {
     position: absolute;
     display: flex;
     font-family: 'Cairo';
@@ -251,7 +258,7 @@ button {
     font-size: 25px;
 }
 
-.fazenda .id1{
+.fazenda .id1 {
     position: absolute;
     display: flex;
     right: 200px;
@@ -259,7 +266,7 @@ button {
     height: 36px;
 }
 
-.fazenda .id2{
+.fazenda .id2 {
     position: absolute;
     top: 290px;
     width: 145px;
@@ -270,12 +277,12 @@ button {
     position: absolute;
     top: 290px;
     display: flex;
-    margin-left: 140px;
+    margin-left: 90px;
 }
 
 
 .indicador {
-    margin-left: 30px;
+    margin-left: 2px;
 }
 
 .red {
@@ -292,34 +299,39 @@ button {
     color: #F8D51F;
 }
 
-.orange{
+.orange {
     padding-left: 10px;
     color: #FF7E47;
 }
 
-.caixa{
+.caixa {
     position: absolute;
     width: 1250px;
     height: 620px;
     right: 100px;
-    top:270px
+    top: 270px
 }
 
 .detalhe {
+    position: absolute;
+    right: 100px;
     font-family: 'Quicksand';
     font-weight: 700;
     font-size: 24px;
-    
+    top: 280px;
 }
 
 .detalhe1 {
+    position: absolute;
+    right: 100px;
+    top: 570px;
     font-family: 'Quicksand';
     font-weight: 700;
     font-size: 24px;
-    
+
 }
 
-.caixatopo1{
+.caixatopo1 {
     position: absolute;
     width: 300px;
     height: 200px;
@@ -329,7 +341,7 @@ button {
     top: 60px;
 }
 
-.caixatopo2{
+.caixatopo2 {
     position: absolute;
     width: 300px;
     height: 200px;
@@ -339,7 +351,7 @@ button {
     top: 60px;
 }
 
-.caixatopo3{
+.caixatopo3 {
     position: absolute;
     width: 300px;
     height: 200px;
@@ -350,7 +362,7 @@ button {
 }
 
 
-.caixatopo4{
+.caixatopo4 {
     position: absolute;
     width: 300px;
     height: 200px;
@@ -360,7 +372,7 @@ button {
     top: 350px;
 }
 
-.caixatopo5{
+.caixatopo5 {
     position: absolute;
     width: 300px;
     height: 200px;
@@ -370,7 +382,7 @@ button {
     top: 350px;
 }
 
-.caixatopo6{
+.caixatopo6 {
     position: absolute;
     width: 300px;
     height: 200px;
@@ -378,6 +390,24 @@ button {
     background-color: #F1DB67;
     right: 100px;
     top: 350px;
+}
+
+
+.sensores{
+    font-family: 'Quicksand';
+    font-weight: 700;
+    font-size: 25pt;
+    position: absolute;
+    right: 75px;
+    top: 40px;
+}
+
+.estado{
+    position: absolute;
+    font-family: 'Quicksand';
+    font-size: 15pt;
+    right: 85px;
+    top: 80px;
 }
 .footer {
     color: #fff;
@@ -387,6 +417,14 @@ button {
 
 }
 
+img{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 100px;
+    height: 100px;
+
+}
 .footer .container {
     font-family: sans-serif;
     font-size: small;
