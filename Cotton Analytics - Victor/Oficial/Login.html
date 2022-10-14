@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="estilos_Login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&family=Leckerli+One&family=Montserrat:wght@500&family=Questrial&family=Quicksand&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&family=Leckerli+One&family=Montserrat:wght@500&family=Questrial&family=Quicksand&display=swap"
         rel="stylesheet">
 </head>
 
@@ -59,7 +60,7 @@
 
                     <input id="ipt_password" type="password" placeholder="*******">
 
-                    <button onclick="entrar()">Entrar</button>
+                    <button onclick="validacao()">Entrar</button>
                 </div>
             </div>
         </div>
@@ -95,19 +96,40 @@
 </html>
 
 <script>
-function entrar() {
-    var user = ipt_email.value
-    var pass = ipt_password.value
+    function validacao() {
+        var user = ipt_email.value
 
-    if (user == '' || pass == '') {
-        alert("Preencha todos os campos!")
-    } else if (user != 'cottonanalytics@gmail.com' && pass != 'cottonanalytics') {
-        alert("Login e senha inválidos!")
-    } else {
-        alert("Logado com sucesso!")
+        if (user == '') {
+            alert('Preencha o campo user com o seu e-mail')
+
+        } else {
+            if (user != "cottonanalytics.com") {
+                alert('Email incorreto')
+
+            } else {
+                validacao2()
+            }
+        }
+        ipt_email.value = ''
+        ipt_password.value = ''
     }
-    ipt_email.value = ''
-    ipt_password.value = ''
-    ipt_email.focus()
-}
+
+    function validacao2() {
+        var pass = ipt_password.value
+
+        if (pass == '') {
+            alert('Preencha o campo senha')
+
+        } else {
+
+            if (pass != "cottonanalytics") {
+                alert("Senha incorreta")
+            } else {
+                alert('certo')
+            }
+
+            ipt_email.value = ''
+            ipt_password.value = ''
+        }
+    }
 </script>
