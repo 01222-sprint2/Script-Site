@@ -23,10 +23,17 @@ body {
 
 
 /* ========================================= INICIO DO HEADER =========================================== */
+
 .header {
     background-color: #0D7980;
-    height: 114px;
+    height: 70px;
     color: #ffffff;
+}
+
+/* Respiro da Página, margin auto para o sistema do pc que decidir como fica a alteração */
+.container {
+    margin: auto;
+    width: 80%;
 }
 
 .header .container {
@@ -41,8 +48,7 @@ body {
 
 .nome_Empresa #span1 {
     font-family: 'Quicksand';
-    src: url('Fonte/Quicksand-Regular.ttf') format('truetype');
-    font-size: 35px;
+    font-size: 26px;
     font-weight: 700;
 
     align-self: center;
@@ -51,22 +57,21 @@ body {
 
 .nome_Empresa #span2 {
     font-family: 'Leckerli One', cursive;
-    src: url('Fonte/LeckerliOne-Regular.ttf') format('truetype');
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 700;
-  
+
     align-self: center;
 }
 
-.navbar {
+.header .navbar {
     font-family: 'Montserrat';
     font-weight: 600;
-    font-size: 24px;
+    font-size: 16px;
     display: flex;
     justify-content: space-around;
     list-style: none;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 24px;
     width: 700px;
     color: #FFFFFF;
 
@@ -74,12 +79,14 @@ body {
 
 .navbar .agora {
     font-weight: 1000;
+    color: #000;
 }
 
 .navbar a {
-    color: #000;
-    text-decoration: none;
+   color: #FFFFFF;
+   text-decoration: none;
 }
+
 /* .header {
     color: #ffffff;
     width: 100%;
@@ -293,66 +300,56 @@ input::placeholder {
 .footer {
     color: #fff;
     background-color: #0D7980;
-    height: 288px;
-
+    justify-content: center;
+    align-items: center;
 }
 
 .footer .container {
-    font-family: sans-serif;
-    font-size: small;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    height: 125px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
 }
 
-.footer .contato {
-    margin-top: 2.5%;
+/* .footer .contato {
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 88%;
-}
+    align-content: space-between;
+    width: 800px;
+} */
 
 .logo #span1 {
     font-family: 'Quicksand';
-    src: url('Fonte/Quicksand-Regular.ttf') format('truetype');
-    font-size: 35px;
+    font-size: 26px;
     font-weight: 700;
-    margin-top: 8px;
     align-self: center;
-
 }
 
 .logo #span2 {
     font-family: 'Leckerli One', cursive;
-    src: url('Fonte/LeckerliOne-Regular.ttf') format('truetype');
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 700;
-    margin-top: 8px;
     align-self: center;
 }
 
 .footer .container .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     font-family: 'Montserrat';
     font-weight: 600;
-    font-size: 24px;
-    display: flex;
-    justify-content: space-around;
+    font-size: 16px;
     list-style: none;
-    align-items: center;
-    margin-top: 30px;
     width: 700px;
     color: #FFFFFF;
 }
 
 .footer .container #span3 {
     font-family: 'Montserrat';
-    font-size: 30px;
+    font-weight: 500;
+    font-size: 16px;
 }
-
-.footer .logo {
-    margin-top: 3%;
-}
-
-/* ====================================== FIM DO FOOTER ======================================== */
