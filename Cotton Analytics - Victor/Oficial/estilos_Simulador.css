@@ -46,6 +46,11 @@ body {
     display: flex;
 }
 
+.nome_Empresa a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 .nome_Empresa #span1 {
     font-family: 'Quicksand';
     font-size: 26px;
@@ -312,6 +317,11 @@ input::placeholder {
     padding-top: 15px;
     padding-bottom: 15px;
 
+}
+
+.logo a{
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 /* .footer .contato {

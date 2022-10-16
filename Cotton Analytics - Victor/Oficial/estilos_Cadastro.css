@@ -36,6 +36,11 @@ body {
     display: flex;
 }
 
+.nome_Empresa a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 .nome_Empresa #span1 {
     font-family: 'Quicksand';
     font-size: 26px;
@@ -180,6 +185,10 @@ button {
     align-content: space-between;
     width: 800px;
 } */
+.logo a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
 
 .logo #span1 {
     font-family: 'Quicksand';
