@@ -25,8 +25,8 @@
         <div class="container">
             <!-- Fiz um nome composto então coloquei eles dentro de uma divisão própia no container -->
             <div class="nome_Empresa">
-                <span id="span1">Cotton</span>
-                <span id="span2">Analytics</span>
+                <span id="span1"><a href="Index.html">Cotton</a></span>
+                <span id="span2"><a href="Index.html">Analytics</a></span>
             </div>
             <ul class="navbar">
                 <li class="agora">Home</li>
@@ -49,12 +49,13 @@
         <div class="container">
             <div class="contexto">
                 <div class="texto">
-                    <span>A Cotton<span id="analytics">Analytics</span> é uma empresa de monitoramento de umidade e
+                    <span>
+                        A Cotton<span id="analytics">Analytics</span> é uma empresa de monitoramento de umidade e
                         temperatura em plantações de algodão. Nós implantamos um arduíno
                         que é capaz de capturar dados e gerar gráficos em tempo real para
                         que o agricultor possa ter o devido controle da sua plantação.</span>
                 </div>
-                <button onclick="window.open('Serviços.html')">Saiba Mais</button>
+                <a href="Serviços.html"><button>Saiba Mais</button></a>
             </div>
             <img src="assets/imagem_dados_home.svg">
         </div>
@@ -67,19 +68,21 @@
                 <div class="box">
                     <h4>MISSÃO</h4>
                     <img src="assets/imagem_missao.svg" alt="Icone de Missão">
-                    <p><strong>Monitorar temperatura e Umidade em safras de algodão, para assim gerar dados integros para nossos clientes.</strong></p>
+                    <p><strong>Monitorar temperatura e Umidade em safras de algodão, para assim gerar dados integros
+                            para nossos clientes.</strong></p>
                 </div>
                 <div class="box">
                     <h4>VISÃO</h4>
                     <img src="assets/imagem_visao.svg" alt="Icone de Visão">
-                    <p><strong>Ser a melhor empresa de monitoramento de safras, contribuindo de forma acertiva para as tomadas de decisão agricultor</strong></p>
+                    <p><strong>Ser a melhor empresa de monitoramento de safras, contribuindo de forma acertiva para as
+                            tomadas de decisão do agricultor</strong></p>
                 </div>
                 <div class="box">
                     <h4>VALORES</h4>
                     <img src="assets/imagem_valores.svg" alt="Icone Valores">
                     <p><strong>Qualidade de nossos produtos e serviços;
-                        Segurança é inegociável;
-                        Respeito para todos, dentro e fora da empresa;</strong></p>
+                            Segurança é inegociável;
+                            Respeito para todos, dentro e fora da empresa;</strong></p>
                 </div>
             </div>
             <div class="caixa">
@@ -88,6 +91,7 @@
                 <Input type="email" placeholder="E-mail:">
                 <Input type="text" placeholder="Assunto:">
                 <Input type="text" placeholder="Mensagem:" id="inp_msg">
+                    <button onclick="Enviar()">Enviar</button>
             </div>
         </div>
     </div>
@@ -95,8 +99,8 @@
     <div class="footer">
         <div class="container">
             <div class="logo">
-                <span id="span1">Cotton</span>
-                <span id="span2">Analytics</span>
+                <span id="span1"><a href="Index.html">Cotton</a></span>
+                <span id="span2"><a href="Index.html">Analytics</a></span>
             </div>
             <ul class="navbar">
                 <li class="agora">Home</li>
@@ -117,9 +121,8 @@
         </div>
     </div>
 </body>
+
 </html>
 <script>
-function redimensionar() {
-    
-}
+    // Fazer validação do Button Enviar
 </script>

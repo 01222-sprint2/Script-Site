@@ -1,8 +1,8 @@
 body {
-    margin: 0px;
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #FFFFFF;
 }
-
-
 
 .container {
     width: 80%;
@@ -31,20 +31,21 @@ body {
     display: flex;
 }
 
+.nome_Empresa a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
 .nome_Empresa #span1 {
     font-family: 'Quicksand';
     font-size: 26px;
     font-weight: 700;
-
     align-self: center;
-
 }
 
 .nome_Empresa #span2 {
     font-family: 'Leckerli One', cursive;
     font-size: 26px;
     font-weight: 700;
-
     align-self: center;
 }
 
@@ -73,47 +74,42 @@ body {
 }
 
 
-#back {
-    
-    background-image: url(https://raw.githubusercontent.com/CottonAnalytics/Script-Site-Calculadora/f526ed948d712c9fe99e3a34eaf4bf548b63226a/Imagens-Site/SVG/backgorund_vetor.svg);
-    background-size: cover;
-}
-
-
 /*Banner*/
 .banner {
-    color: white;
-    background-image:
-        url(https://img.freepik.com/fotos-premium/ramo-de-algodao-florescendo-na-mesa_23-2148287624.jpg?w=2000);
     display: flex;
-    height: 424px;
+    height: 500px;
+    background-image: url(https://img.freepik.com/fotos-premium/ramo-de-algodao-florescendo-na-mesa_23-2148287624.jpg?w=2000);
+    color: white;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    
     /* tags responsáveis pelo efeito parallax e opacidade */
     background-attachment: fixed;
+    background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.35);
     background-blend-mode: color;
-    
 }
 
 .banner .container {
-   
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
-    .banner .container #frase_solucao {
-        justify-items: center;
-        text-align: center;
-        font-size: 90px;
-        font-weight: 700;
-        font-family: 'Quicksand'
-    }
+.banner .container #frase_solucao {
+    justify-items: center;
+    text-align: center;
+    width: 666px;
+    font-size: 90px;
+    font-weight: 700;
+    font-family: 'Quicksand'
+}
 
 /*conteudo*/
+
+#back {
+    background-image: url(assets/Imagens-Site/SVG/backgorund_vetor.svg);
+    background-size: cover;
+}
 
 .conteudo{
     display: flex;
@@ -124,24 +120,24 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 450px;
+    height: 600px;
 }
 .conteudo_column {
     display: flex;
     flex-direction: column;
-    width: 550px;
+    width: 670px;
 }
 
 .conteudo .container #img_solucao {
     width: 400px;
-    height: 206px;
+    height: 306px;
 }
 
 .conteudo p {
     margin: 0;
     text-align: justify;
     flex-direction: column;
-    font-size: 24px;
+    font-size: 30px;
     font-family: 'Questrial';
 }
 
@@ -193,7 +189,7 @@ body {
 
 .box p {
     font-family: 'Cairo';
-    font-size: 25px;
+    font-size: 22px;
     height: 117px;
     width: 313px;
     margin-top: 30px;
@@ -206,59 +202,6 @@ body {
     height: 127px;
 }
 
-/* 
-.social .container {
-
-    height: 556;
-    display: flex;
-    justify-content: center;
-
-}
-
-.social p {
-    font-size: 25px;
-    padding: 10px;
-    font-family: 'Cairo';
-
-}
-
-
-.social .container .box {
-    border-radius: 10px;
-    background-color: #A7BDBD;
-    width: 381px;
-    height: 430px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Cairo';
-
-
-}
-
-.social .container .box img {
-    width: 195px;
-    height: 127px;
-}
-
-.social h4 {
-    font-size: 30px;
-}
-
-.social .boxes {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 1728px;
-    height: 644px;
-
-}
-
-.box p {
-    text-align: center;
-} */
-
 /*contato*/
 
 .caixa {
@@ -267,7 +210,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     border-radius: 15px;
     margin-top: 5%;
     height: 500px;
@@ -310,117 +252,6 @@ body {
     margin-bottom: 55px;
 }
 
-/* .contato {
-    height: 720px;
-}
-
-.contato h2 {
-    font-size: 50px;
-    margin: 0;
-    text-align: center;
-    font-family: 'Cairo';
-}
-
-.contato .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-self: flex-end;
-    border-radius: 15px;
-    height: 500px;
-}
-
-.input {
-    width: 500px;
-    height: 450px;
-}
-
-input {
-    font-family: 'Quicksand';
-    font-size: 30px;
-}
-
-.contato input::placeholder {
-    color: white;
-    font-family: 'Quicksand';
-    font-size: 30px;
-}
-
-
-.contato .inputs {
-
-    color: white;
-    width: 458px;
-    height: 62px;
-    border-radius: 15px;
-    background-color: #19403C;
-    padding: 5px;
-    margin: 5px;
-
-}
-
-#input_mensagem {
-    color: white;
-    width: 458px;
-    height: 164px;
-    border-radius: 15px;
-    background-color: #19403C;
-    padding: 5px;
-    margin: 5px;
-} */
-
-/*footer*/
-/* 
-.footer{
-    background-color: #0D7980;
-    
-    height: 288px;
-}
-
-.footer .container {
-    background-color: #0D7980;
-
-
-    margin-top: 2px;
-}
-
-.footer .container {
-    flex-direction: column;
-    align-items: center;
-}
-
-.container .nav_footer {
-    width: 970px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-
-
-
-}
-
-
-.nav_footer li {
-    list-style-type: none;
-    color: white;
-    font-size: 30px;
-    padding: 20px;
-    margin: 3px;
-    align-items: center;
-    justify-content: center;
-}
-
-.ultimo_h1 {
-    font-size: 35px;
-    margin-left: 145px;
-    color: white;
-
-
-} */
-
-
-
 /* Rodapé */
 
 .footer {
@@ -440,6 +271,11 @@ input {
 
 }
 
+.logo a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 /* .footer .contato {
     margin-top: 10px;
     display: flex;
@@ -449,7 +285,7 @@ input {
 } */
 
 .logo #span1 {
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', sans-serif;
     font-size: 26px;
     font-weight: 700;
     align-self: center;
