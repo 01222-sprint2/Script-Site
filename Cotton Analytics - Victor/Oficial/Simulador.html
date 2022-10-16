@@ -34,19 +34,7 @@
             </ul>
         </div>
     </div>
-    <!-- <div class="header">
-        <div class="container">
-            <h1>Cotton<span class="analytics">Analytics</span></h1>
-            <ul class="navbar">
-                <li class="aqui">Home</li>
-                <li>Solução IoT</li>
-                <li>Simulador</li>
-                <li>Login</li>
-                <li>|</li>
-                <li>Cadastro</li>
-            </ul>
-        </div>
-    </div> -->
+   
 
     <div class="section1">
         <div class="container">
@@ -59,12 +47,12 @@
                         Na safra 2019/2020, o fungo causou um prejuízo de R$ 1,89 bilhões ao setor <br>
                         tendo o potencial de perda das lavouras de algodão em 35%.
                     </p>
-                    <h3>Para a medição da sua capacidade total de produtividade, iremos solicitar alguns dados:</h3>
+                    <h3>Para simular um futuro prejuízo de sua colheita, iremos solicitar alguns dados:</h3>
                     <br>
                     <div class="form">
                         <span class="linha">
                             <span class="labels">
-                                Quantidade de hectares
+                                Quantidade de hectares:
                             </span>
                             <span class="inputs">
                                 <input type="text" id="ipt_hectares" placeholder="Qtd hectares">
@@ -72,7 +60,7 @@
                         </span>
                         <span class="linha">
                             <span class="labels">
-                                Qtd em @ produzidas
+                                Qtd em @(15Kg) produzidas por safra:
                             </span>
                             <span class="inputs">
                                 <input type="text" id="ipt_pesoA" placeholder="Peso em @">
@@ -80,7 +68,7 @@
                         </span>
                         <span class="linha">
                             <span class="labels">
-                                Preço de venda por @
+                                Preço de venda por @:
                             </span>
                             <span class="inputs">
                                 <input type="text" id="ipt_ValorA" placeholder="Preço por @">
@@ -105,13 +93,12 @@
                     <button onclick="calcular()">Simular</button>
                 </div>
                 <div id="div_mensagem" class="resultado">
-                    <h1>Expectativa para a sua safra sem a CottonTech</h1>
-                    <span>Sua produtividade estimada seria de <b id="b_pesoArrobasAmostras"></b> @ de algodão em toda a
-                        safra</span>
-                    <span>Você teria uma colheita de <b id="b_pesoDivHectar"></b>@/hectar,</span>
-                    <span>o que indica um deficit de R$<b id="b_aux_perda"></b> reais em receita bruta.</span>
-                    <span>Contudo, essa perda pode ser controlada com nossa tecnologia, </span>
-                    <span>fazendo-o ter um retorno esperado de R$<b id="b_valor_total"></b> reais</span>
+                    <h1>Expectativa para a sua safra sem a cottonAnalytics</h1>
+                    <span>Na sua última <b>safra</b> você teve a colheita de <b id="b_pesoArrobasAmostras"></b> @ de algodão,</span>
+                    <span>isso corresponde a <b id="b_pesoDivHectar"></b>@ produzidos em cada um dos seus hectares,</span>
+                    <span>o que indica que você tende a perder R$<b id="b_aux_perda"></b> reais em receita bruta.</span>
+                    <span>Contudo, essa possível perda pode ser controlada com a nossa tecnologia, </span>
+                    <span>revertendo esse prejuízo, totalizando uma receita de R$<b id="b_valor_total"></b> reais</span>
 
                     <h1>Projeção para anos futuros com <b id="b_porcentagem"></b>% de perda</h1>
                     <span>Em 2 safras você deixa de receber R$<b id="b_aux_perda2"></b>, que poderiam ser revertidos e

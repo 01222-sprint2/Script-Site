@@ -120,7 +120,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 600px;
+    height: 500px;
 }
 .conteudo_column {
     display: flex;
@@ -152,7 +152,7 @@ body {
 
 .social {
 
-    height: 550px;
+    height: 600px;
     display: flex;
     align-items: center;
 }
