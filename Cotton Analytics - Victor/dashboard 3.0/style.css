@@ -1,0 +1,356 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #FFFFFF;
+}
+
+
+/* ######################################################## INÍCIO DO HEADER ########################################################## */
+.header {
+    background-color: #0D7980;
+    height: 70px;
+    color: #ffffff;
+}
+
+/* Respiro da Página, margin auto para o sistema do pc que decidir como fica a alteração */
+.container {
+    margin: auto;
+    width: 80%;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.nome_Empresa {
+    display: flex;
+}
+
+.nome_Empresa #span1 {
+    font-family: 'Quicksand';
+    font-size: 26px;
+    font-weight: 700;
+
+    align-self: center;
+
+}
+
+.nome_Empresa #span2 {
+    font-family: 'Leckerli One', cursive;
+    font-size: 26px;
+    font-weight: 700;
+
+    align-self: center;
+}
+
+.header .navbar {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    margin-top: 24px;
+    width: 700px;
+    color: #FFFFFF;
+
+}
+
+.navbar .agora {
+    font-weight: 1000;
+    color: #000;
+}
+
+.navbar a {
+   color: #FFFFFF;
+   text-decoration: none;
+}
+/* ######################################################## FIM DO HEADER ########################################################## */
+
+
+
+/* ########################################################## INÍCIO DAS SECTIONS ############################################################ */
+.sections span {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 100%;
+    align-self: center;
+    /* margin-top: 15px; */
+}
+
+.sections {
+    /* border: solid 5px green; */
+    height: 1900px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* ###################################################### INÍCIO LEFTMENU ###################################################### */
+
+.leftmenu {
+    /* border: solid 5px orange; */
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: #D9D9D9;
+}
+
+.leftmenu .user {
+    /* border: solid 2px orange; */
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.user span {
+    margin-top: 15px;
+    /* border: solid 2px brown; */
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menus {
+    display: flex;
+    flex-direction: column;
+    /* border: solid 2px peru; */
+    list-style: none;
+    padding-left: 15px;
+    height: 50%;
+    align-items: left;
+    justify-content: space-around;
+}
+
+.menus li {
+    /* border: solid 2px violet; */
+    font-family: 'Montserrat';
+    font-size: 20px;
+}
+
+/* ###################################################### FIM LEFTMENU ###################################################### */
+
+
+/* ###################################################### INICIO MENU DOS GRÁFICOS ###################################################### */
+.graphsmenu {
+    display: flex;
+    flex-direction: column;
+    /* border: solid 5px blue; */
+    width: 80%;
+}
+
+/* ###################################################### INÍCIO MÉTRICAS DOS ALERTAS ###################################################### */
+.metricas1 {
+    /* border: solid 5px gold; */
+    display: flex;
+    width: auto;
+    /* margin: auto; */
+    margin-top: 1%;
+    justify-content: center;
+    align-items: center;
+}
+
+.metricas1 img {
+    /* border: solid 4px orange; */
+    /* max-width: 70%; */
+    width: 450px;
+    height: 30px;
+}
+
+.metricas2 {
+    /* border: solid 5px darkcyan; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+}
+
+.metricas2 img {
+    align-self: center;
+    max-height: 50%;
+    max-width: 50%;
+    width: 100%;
+    height: auto;
+    /* width: 45%;
+    height: 45%; */
+    margin: 15px 0;
+}
+/* ###################################################### FIM MÉTRICAS DOS ALERTAS ###################################################### */
+
+
+/* ###################################################### INÍCIO GRÁFICOS/TEMPERATURA/UMIDADE ###################################################### */
+.graphs {
+    display: flex;
+    flex-direction: column;
+    /* border: solid 5px darkturquoise; */
+    height: 100%;
+}
+
+.graphs h2 {
+    /* border: solid 4px purple; */
+    font-size: 170%;
+    font-family: 'Cairo';
+    align-self: center;
+    margin-block-end: 0.5em;
+}
+
+.graphs h3 {
+    /* border: solid 4px purple; */
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-size: 130%;
+    font-family: 'Cairo';
+    align-self: center;
+}
+
+.graficos {
+    /* border: solid 4px black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.grafico {
+    /* border: solid 2px aqua; */
+    display: flex;
+    flex-direction: column;
+    width: 60vh;
+    height: 25vh;
+    align-self: center;
+    position: relative;
+}
+
+.graphs span {
+    /* border: solid 2px chartreuse; */
+    align-self: center;
+    margin-top: 4%;
+}
+
+.minmaxbarra {
+    /* border: solid 4px cornflowerblue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 15%;
+    width: 84%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 2%;
+}
+
+.minmax {
+    /* border: solid 2px black; */
+    display: flex;
+    flex-direction: column;
+    /* height: 40%; */
+}
+
+
+.imgMedida {
+    /* border: solid 2px black; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.imgMedida img {
+    /* border: solid 2px black; */
+    margin-right: 3%;
+}
+
+.imgMedida span {
+    font-family: 'Cairo';
+    font-size: 25px;
+}
+
+.graf_setores {
+    /* border: solid 2px black; */
+    position: relative;
+    width: 45vh;
+    height: 25vh;
+}
+
+.red {
+    color: #F91A1A;
+}
+
+.orange {
+    color: #FD6A2B;
+}
+
+.titleblue {
+    color: #0D7980;
+}
+
+.blue {
+    color: #002A96;
+}
+
+/* ###################################################### FIM GRAFICOS/TEMPERATURA/UMIDADE ###################################################### */
+
+/* ########################################################## FIM SECTIONS ############################################################ */
+
+
+
+/* ######################################### FOOTER ############################################### */
+.footer {
+    color: #fff;
+    background-color: #0D7980;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 125px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+/* .footer .contato {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 800px;
+} */
+
+.logo #span1 {
+    font-family: 'Quicksand';
+    font-size: 26px;
+    font-weight: 700;
+    align-self: center;
+}
+
+.logo #span2 {
+    font-family: 'Leckerli One', cursive;
+    font-size: 26px;
+    font-weight: 700;
+    align-self: center;
+}
+
+.footer .container .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 16px;
+    list-style: none;
+    width: 700px;
+    color: #FFFFFF;
+}
+
+.footer .container #span3 {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 16px;
+}
