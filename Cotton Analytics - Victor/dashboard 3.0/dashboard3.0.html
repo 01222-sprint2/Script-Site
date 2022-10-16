@@ -67,64 +67,72 @@
             </ul>
         </div>
         <div class="graphsmenu">
-            <ul class="metricas1">
-                <img src="assets/alertmetrics.png">
-            </ul>
             <div class="metricas2">
                 <span>Temperatura</span>
                 <img src="assets/tempmetrics.png">
                 <span>Umidade</span>
                 <img src="assets/umidmetrics.png">
             </div>
+            <ul class="metricas1">
+                <img src="assets/alertmetrics.png">
+            </ul>
             <div class="graphs">
                 <h2 class="titleblue">Hectare A - Fazenda A</h2>
-                <h3 class="orange">Temperatura</h3>
-                <div class="graficos">
-                    <div class="grafico">
-                        <canvas id="temp_atual"></canvas>
+                <div class="divisoes">
+                    <h3 class="orange">TEMPERATURA</h3>
+                    <div class="graficos">
+                        <div class="grafico">
+                            <canvas id="temp_atual"></canvas>
+                        </div>
+                        <div class="grafico">
+                            <canvas id="temp_semana"></canvas>
+                        </div>
                     </div>
-                    <div class="grafico">
-                        <canvas id="temp_semana"></canvas>
+                    <div class="texto">
+                        <span class="central">O <span class="red">Hectare A</span> entrou no estado
+                            <span>crítico</span>.</span>
+                        <br><span>Temperatura atingiu
+                            20°C., que está abaixo do ideal. O problema está no <span class="red">setor 1</span></span>
+                    </div>
+                    <div class="minmaxbarra">
+                        <div class="minmax">
+                            <span>Temperatura máxima e mínima <br>atual do Hectare</span>
+                            <div class="imgMedida">
+                                <img src="assets/max.png"><span>27°C</span>
+                            </div>
+                            <div class="imgMedida">
+                                <img src="assets/min.png"><span>20°C</span>
+                            </div>
+                        </div>
+                        <div class="graf_setores">
+                            <canvas id="barra_tempSetor"></canvas>
+                        </div>
                     </div>
                 </div>
-                <span>O <span class="red">Hectare A</span> entrou no estado <span>crítico</span>. Temperatura atingiu
-                    20°C., que está abaixo do ideal. O problema está no <span class="red">setor 1</span></span>
-                <div class="minmaxbarra">
-                    <div class="minmax">
-                        <span>Temperatura máxima e mínima <br>atual do Hectare</span>
-                        <div class="imgMedida">
-                            <img src="assets/max.png"><span>27°C</span>
+                <div class="divisoes">
+                    <h3 class="blue">UMIDADE</h3>
+                    <div class="graficos">
+                        <div class="grafico">
+                            <canvas id="umid_atual"></canvas>
                         </div>
-                        <div class="imgMedida">
-                            <img src="assets/min.png"><span>20°C</span>
+                        <div class="grafico">
+                            <canvas id="umid_semana"></canvas>
                         </div>
                     </div>
-                    <div class="graf_setores">
-                        <canvas id="barra_tempSetor"></canvas>
-                    </div>
-                </div>
-                <h3 class="blue">Umidade</h3>
-                <div class="graficos">
-                    <div class="grafico">
-                        <canvas id="umid_atual"></canvas>
-                    </div>
-                    <div class="grafico">
-                        <canvas id="umid_semana"></canvas>
-                    </div>
-                </div>
-                <span>Está tudo bem com o Hectare A em relação a umidade</span>
-                <div class="minmaxbarra">
-                    <div class="minmax">
-                        <span>Temperatura Máxima e <br>Mínima Diária do Hectare</span>
-                        <div class="imgMedida">
-                            <img src="assets/max.png"><span>10%</span>
+                    <span>Está tudo bem com o Hectare A em relação a umidade</span>
+                    <div class="minmaxbarra">
+                        <div class="minmax">
+                            <span>Temperatura Máxima e <br>Mínima Diária do Hectare</span>
+                            <div class="imgMedida">
+                                <img src="assets/max.png"><span>10%</span>
+                            </div>
+                            <div class="imgMedida">
+                                <img src="assets/min.png"><span>9%</span>
+                            </div>
                         </div>
-                        <div class="imgMedida">
-                            <img src="assets/min.png"><span>9%</span>
+                        <div class="graf_setores">
+                            <canvas id="barra_umidSetor"></canvas>
                         </div>
-                    </div>
-                    <div class="graf_setores">
-                        <canvas id="barra_umidSetor"></canvas>
                     </div>
                 </div>
             </div>
@@ -187,6 +195,7 @@
         type: 'line',
         data: data_tempAtual,
         options: {
+            maintainAspectRatio: false,
             scales: {
                 y: {
                     beginAtZero: true,
@@ -278,6 +287,7 @@
         type: 'line',
         data: data_tempSemana,
         options: {
+            maintainAspectRatio: false,
             scales: {
                 y: {
                     beginAtZero: true,
@@ -371,7 +381,9 @@
     const cfg_maxMinTemp = {
         type: 'bar',
         data: data_maxMinTemp,
-        options: {}
+        options: {
+            maintainAspectRatio: false
+        }
     };
 
     // GRÁFICO LINHA - UMIDADE ATUAL
