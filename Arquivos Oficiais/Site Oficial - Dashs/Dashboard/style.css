@@ -248,6 +248,10 @@ body {
     /* height: 40%; */
 }
 
+.minmax span {
+    text-align: center;
+    padding-bottom: 3%;
+}
 
 .imgMedida {
     /* border: solid 2px black; */

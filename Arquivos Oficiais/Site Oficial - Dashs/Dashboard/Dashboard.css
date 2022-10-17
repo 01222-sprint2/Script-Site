@@ -211,6 +211,7 @@ body {
 .fazendaA {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 7%;
 }
 
 .caixatopo1 {
