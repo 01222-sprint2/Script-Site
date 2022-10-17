@@ -1,0 +1,647 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Montserrat:wght@500&family=Montserrat&family=Quicksand&family=Cairo:wght@900&family=Cairo&family=Questrial&family=Leckerli+One&family=Cairo:wght@700&family=Quicksand:wght@700&display=swap');
+
+body {
+    margin: 0;
+}
+
+.header {
+    background-color: #0D7980;
+    height: 60px;
+    color: #ffffff;
+}
+
+/* Respiro da Página, margin auto para o sistema do pc que decidir como fica a alteração */
+.container {
+    margin: auto;
+    width: 80%;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.nome_Empresa {
+    display: flex;
+}
+
+.nome_Empresa #span1 {
+    font-family: 'Quicksand';
+    src: url('Fonte/Quicksand-Regular.ttf') format('truetype');
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 4px;
+    align-self: center;
+
+}
+
+.nome_Empresa #span2 {
+    font-family: 'Leckerli One', cursive;
+    src: url('Fonte/LeckerliOne-Regular.ttf') format('truetype');
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 4px;
+    align-self: center;
+}
+
+.navbar {
+    position: absolute;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 450px;
+    width: 700px;
+    color: #FFFFFF;
+
+}
+
+.navbar .agora {
+    font-weight: 1000;
+}
+
+.navbar a {
+    color: #000;
+    text-decoration: none;
+}
+
+.navbar_lateral li {
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.aqui {
+    color: #0D7980;
+    font-weight: 800;
+}
+
+.detalhe a {
+    color: #0D7980;
+    text-decoration: none;
+}
+
+.detalhe1 a {
+    color: #0D7980;
+    text-decoration: none;
+}
+
+.banner {
+    height: 779px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.banner .conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 780px;
+}
+
+
+.lateral {
+    background-image: url(algodao.webp);
+    background-color: rgba(0, 0, 0, 0.548);
+    background-blend-mode: color;
+    background-size: cover;
+    width: 310px;
+    height: 780px;
+    display: flex;
+    position: absolute;
+    left: 0px;
+    color: white;
+
+}
+
+img {
+    position: absolute;
+    top: 20px;
+    left: 21px;
+    width: 90px;
+    height: 90px;
+
+}
+
+.usuario {
+    position: absolute;
+    border: #000000 solid 8px;
+    background-color: white;
+    width: 130px;
+    height: 130px;
+    border-radius: 100px;
+    right: 100px;
+    margin-top: 30px;
+}
+
+.usuario p {
+    font-family: 'Cairo';
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.navbar_lateral {
+    font-family: 'Questrial';
+    font-size: 24px;
+    list-style: none;
+    margin-top: 80px;
+    margin-left: -80px;
+    font-weight: 700;
+}
+
+
+button {
+    width: 253px;
+    height: 34px;
+    left: 700px;
+    align-self: center;
+    margin-top: 20px;
+    background: #A66038;
+    border-radius: 10px;
+    color: white;
+    border-style: none;
+}
+
+.imagens img{
+    position: absolute;
+    top: 160px;
+    left: 480px;
+    width: 700px;
+    height: 30px;
+}
+
+.imagens p{
+    font-family: 'Montserrat';
+    position: absolute;
+    top: 50px;
+    right: 480px;
+    font-weight: 700;
+}
+
+.imagens2 img{
+    position: absolute;
+    top: 85px;
+    left: 480px;
+    width: 700px;
+    height: 30px;
+    
+}
+
+.imagens2 p{
+    font-family: 'Montserrat';
+    position: absolute;
+    top: 120px;
+    right: 470px;
+    font-weight: 700;
+}
+
+
+.legenda {
+    width: 1250px;
+    height: 170px;
+    right: 50px;
+    top: 70px;
+    position: absolute;
+}
+
+.legenda p {
+    color: #0D7980;
+    position: absolute;
+    font-family: 'Cairo';
+    font-size: 40px;
+    font-weight: 700;
+    right: 250px;
+    padding-top: 120px;
+}
+
+
+.legenda #sinalizacao {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    justify-content: space-around;
+    font-weight: 600;
+}
+
+
+.alertavermelho {
+    position: absolute;
+    background-color: #F91A1A;
+    border-radius: 100px;
+    width: 38px;
+    height: 36px;
+    bottom: 2px;
+    right: 210px;
+}
+
+.alertalaranja {
+    position: absolute;
+    background-color: #FF7E47;
+    border-radius: 100px;
+    width: 38px;
+    height: 36px;
+    bottom: 2px;
+    right: 400px;
+}
+
+.alertaamarelo {
+    position: absolute;
+    background-color: #F8D51F;
+    border-radius: 100px;
+    width: 38px;
+    height: 36px;
+    bottom: 2px;
+    right: 535px;
+}
+
+.alertaverde {
+    position: absolute;
+    background-color: #52FF00;
+    border-radius: 100px;
+    width: 38px;
+    height: 36px;
+    bottom: 2px;
+    right: 660px;
+}
+
+.alert {
+    position: absolute;
+    left: 1035px;
+    bottom: 2px;
+    display: flex;
+    font-family: 'Cairo';
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 25px;
+}
+
+.alert1 {
+    position: absolute;
+    left: 840px;
+    bottom: 2px;
+    display: flex;
+    font-family: 'Cairo';
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 25px;
+}
+
+.alert2 {
+    position: absolute;
+    left: 710px;
+    bottom: 2px;
+    display: flex;
+    font-family: 'Cairo';
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 25px;
+}
+
+.alert3 {
+    position: absolute;
+    left: 585px;
+    bottom: 2px;
+    display: flex;
+    font-family: 'Cairo';
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 25px;
+}
+
+.fazenda {
+    position: absolute;
+    display: flex;
+    font-family: 'Cairo';
+    font-weight: 1000;
+    font-size: 25px;
+   align-items: center;
+}
+
+.fazenda .id {
+    position: absolute;
+    display: flex;
+    right: 130px;
+    width: 145px;
+    height: 36px;
+    top: 16px;
+}
+
+.fazenda .id2 {
+    position: absolute;
+    top: 290px;
+    width: 145px;
+    height: 36px;
+}
+
+.indicador1 {
+    position: absolute;
+    top: 290px;
+    display: flex;
+    margin-left: 100px;
+}
+
+.indicador {
+    position: relative;
+    top: 15px;
+    margin-left: 600px;
+}
+
+.id {
+    position: absolute;
+    right: 160px;
+}
+
+.id2 {
+    position: absolute;
+    left: 470px;
+}
+
+.red {
+    padding-top: 45px;
+    padding-left: 10px;
+    color: #F91A1A;
+}
+
+.black {
+    padding-top: 20px;
+    padding-left: 12px;
+}
+
+.yellow {
+    padding-top: 50px;
+    padding-left: 10px;
+    color: #F8D51F;
+}
+
+.orange {
+    padding-left: 10px;
+    color: #FF7E47;
+}
+
+.yellow1 {
+   
+    padding-left: 10px;
+    color: #F8D51F;
+}
+
+.red1 {
+    padding-left: 510px;
+    color: #F91A1A;
+}
+
+.black1 {
+    padding-left: 12px;
+}
+
+.caixa {
+    position: absolute;
+    width: 1250px;
+    height: 620px;
+    right: 100px;
+    top: 270px
+}
+
+.detalhe {
+    position: absolute;
+    right: 20px;
+    font-family: 'Quicksand';
+    font-weight: 700;
+    font-size: 24px;
+    top: 250px;
+}
+
+.detalhe1 {
+    position: absolute;
+    right: 20px;
+    top: 510px;
+    font-family: 'Quicksand';
+    font-weight: 700;
+    font-size: 24px;
+
+}
+.bolinha1{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 2px solid red;
+    background-color: red;
+    width: 14px;
+    height: 14px;
+    border-radius: 100px;
+}
+
+.caixatopo1 {
+    position: absolute;
+    width: 236px;
+    height: 150px;
+    border: 3px solid #F91A1A;
+    box-shadow: #F91A1A  5px 10px;
+    right: 548px;
+    top: 80px;
+    border-radius: 10px;
+}
+
+.bolinha2{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 1px solid #F05B1B;
+    background-color: #F05B1B ;
+    width: 13px;
+    height: 13px;
+    border-radius: 100px;
+}
+
+.caixatopo2 {
+    position: absolute;
+    width: 236px;
+    height: 150px;
+    border: 3px solid #F05B1B;
+    box-shadow: #FF7E47 5px 10px;
+    right: 275px;
+    top: 80px;
+    border-radius: 10px;
+}
+
+
+.bolinha3{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 1px solid #F8D51F;
+    background-color: #F8D51F ;
+    width: 13px;
+    height: 13px;
+    border-radius: 100px;
+}
+
+.caixatopo3 {
+    position: absolute;
+    width: 236px;
+    height: 150px;
+    border: 3px solid #F8D51F;
+    box-shadow: #F8D51F  5px 10px;
+    right: 5px;
+    top: 80px;
+    border-radius: 10px;
+}
+
+.bolinha4{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 2px solid red;
+    background-color: red;
+    width: 14px;
+    height: 14px;
+    border-radius: 100px;
+}
+
+.caixatopo4 {
+    position: absolute;
+    width: 236px;
+    height: 150px;
+    border: 3px solid #F91A1A;
+    box-shadow: #F91A1A  5px 10px;
+    right: 545px;
+    top: 340px;
+    border-radius: 10px;
+}
+
+.bolinha5{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 1px solid #F8D51F;
+    background-color: #F8D51F ;
+    width: 13px;
+    height: 13px;
+    border-radius: 100px;
+}
+
+.caixatopo5 {
+    position: absolute;
+    width: 236px;
+    height: 150px;
+    border: 3px solid #F8D51F;
+    box-shadow: #F8D51F  5px 10px;
+    right: 275px;
+    top: 340px;
+    border-radius: 10px;
+}
+
+.bolinha6{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 1px solid #F8D51F;
+    background-color: #F8D51F ;
+    width: 13px;
+    height: 13px;
+    border-radius: 100px;
+}
+
+.caixatopo6 {
+    position: absolute;
+    width: 236px;
+    height: 150px;
+    border: 3px solid #F8D51F;
+    box-shadow: #F8D51F  5px 10px;
+    right: 5px;
+    top: 340px;
+    border-radius: 10px;
+}
+
+
+.sensores {
+    font-family: 'Quicksand';
+    font-weight: 700;
+    font-size: 20pt;
+    position: absolute;
+    right: 60px;
+    top: 30px;
+}
+
+.estado {
+    position: absolute;
+    font-family: 'Quicksand';
+    font-size: 16pt;
+    left:  15px;
+    top: 60px;
+}
+
+.footer {
+    color: #fff;
+    background-color: #0D7980;
+    height: 135px;
+    align-items: center;
+
+}
+
+
+.footer .container {
+    font-family: sans-serif;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer .contato {
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 88%;
+}
+
+.logo #span1 {
+    font-family: 'Quicksand';
+    src: url('Fonte/Quicksand-Regular.ttf') format('truetype');
+    font-size:25px;
+    font-weight: 700;
+    margin-top: 4px;
+    align-self: center;
+
+}
+
+.logo #span2 {
+    font-family: 'Leckerli One', cursive;
+    src: url('Fonte/LeckerliOne-Regular.ttf') format('truetype');
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 6px;
+    align-self: center;
+}
+
+.footer .container .navbar {
+    
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    margin-top: 150px;
+    margin-left: 20px;
+    width: 700px;
+    color: #FFFFFF;
+}
+
+.footer .container #span3 {
+    font-family: 'Montserrat';
+    font-size: 20px;
+}
+
+.footer .logo {
+    margin-top: 3%;
+}
