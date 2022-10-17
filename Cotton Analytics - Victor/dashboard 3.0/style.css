@@ -86,6 +86,7 @@ body {
     height: 1900px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 /* ###################################################### INÍCIO LEFTMENU ###################################################### */
