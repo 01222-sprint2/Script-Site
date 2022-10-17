@@ -86,52 +86,6 @@ body {
     justify-content: center;
 }
 
-/* ###################################################### INÍCIO LEFTMENU ###################################################### */
-
-.leftmenu {
-    /* border: solid 5px orange; */
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    background-color: #D9D9D9;
-}
-
-.leftmenu .user {
-    /* border: solid 2px orange; */
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.user span {
-    margin-top: 15px;
-    /* border: solid 2px brown; */
-    text-align: center;
-    font-family: 'Montserrat';
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.menus {
-    display: flex;
-    flex-direction: column;
-    /* border: solid 2px peru; */
-    list-style: none;
-    padding-left: 15px;
-    height: 50%;
-    align-items: left;
-    justify-content: space-around;
-}
-
-.menus li {
-    /* border: solid 2px violet; */
-    font-family: 'Montserrat';
-    font-size: 20px;
-}
-
-/* ###################################################### FIM LEFTMENU ###################################################### */
-
-
 /* ###################################################### INICIO MENU DOS GRÁFICOS ###################################################### */
 .graphsmenu {
     display: flex;

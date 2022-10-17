@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard 3.0</title>
+    <title>Hectares</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -29,7 +29,7 @@
             </div>
             <ul class="navbar">
                 <li><a href="">Fazendas</a></li>
-                <li class="agora">Hectares</a></li>
+                <li class="agora">Hectares</li>
                 <li><a href="">Logout</a></li>
             </ul>
         </div>
@@ -38,101 +38,77 @@
 
     <!-- INÍCIO DAS SECTIONS -->
     <div class="sections">
-        <!-- <div class="leftmenu">
-            <div class="user">
-                <img src="https://moodle.sptech.school/pluginfile.php/1/core_admin/logo/0x150/1643201436/bkg_01_moodle.png"
-                    alt="">
-                <span>NOME USUÁRIO</span>
-            </div> -->
-            <!-- <div class="menus"> -->
-            <!-- <ul class="menus">
-                <li>
-                    Fazendas
-                </li>
-                <li>
-                    Hectares
-                </li>
-                <li>
-                    Sensores
-                </li>
-                <li>
-                    Média Diária
-                </li>
-                <li>
-                    Média Semanal
-                </li>
-                <li>
-                    Média Mensal
-                </li>
-            </ul>
-        </div> -->
         <div class="graphsmenu">
-            <div class="metricas2">
-                <span>Temperatura</span>
-                <img src="assets/tempmetrics.png">
-                <span>Umidade</span>
-                <img src="assets/umidmetrics.png">
+            <div class="topsection">
+                <div class="metricas2">
+                    <span>Temperatura</span>
+                    <img src="assets/tempmetrics.png">
+                    <span>Umidade</span>
+                    <img src="assets/umidmetrics.png">
+                </div>
+                <ul class="metricas1">
+                    <img src="assets/alertmetrics.png">
+                </ul>
             </div>
-            <ul class="metricas1">
-                <img src="assets/alertmetrics.png">
-            </ul>
             <div class="graphs">
                 <h2 class="titleblue">Hectare A - Fazenda A</h2>
-                <div class="divisoes">
-                    <h3 class="orange">TEMPERATURA</h3>
-                    <div class="graficos">
-                        <div class="grafico">
-                            <canvas id="temp_atual"></canvas>
-                        </div>
-                        <div class="grafico">
-                            <canvas id="temp_semana"></canvas>
-                        </div>
-                    </div>
-                    <div class="texto">
-                        <span class="central">O <span class="red">Hectare A</span> entrou no estado
-                            <span>crítico</span>.</span>
-                        <br><span>Temperatura atingiu
-                            20°C, que está abaixo do ideal. <br>
-                            O problema está no <span class="red">setor 1</span></span>
-                    </div>
-                    <div class="minmaxbarra">
-                        <div class="minmax">
-                            <span>Temperatura máxima e mínima <br>atual do Hectare</span>
-                            <div class="imgMedida">
-                                <img src="assets/max.png"><span>27°C</span>
+                <div class="big">
+                    <div class="divisoes">
+                        <h3 class="orange">TEMPERATURA</h3>
+                        <div class="graficos">
+                            <div class="grafico">
+                                <canvas id="temp_atual"></canvas>
                             </div>
-                            <div class="imgMedida">
-                                <img src="assets/min.png"><span>20°C</span>
+                            <div class="grafico">
+                                <canvas id="temp_semana"></canvas>
                             </div>
                         </div>
-                        <div class="graf_setores">
-                            <canvas id="barra_tempSetor"></canvas>
+                        <div class="texto">
+                            <span class="central">O <span class="red">Hectare A</span> entrou no estado
+                                <span>crítico</span>.</span>
+                            <br><span>Temperatura atingiu
+                                20°C, que está abaixo do ideal. <br>
+                                O problema está no <span class="red">setor 1</span></span>
                         </div>
-                    </div>
-                </div>
-                <div class="divisoes">
-                    <h3 class="blue">UMIDADE</h3>
-                    <div class="graficos">
-                        <div class="grafico">
-                            <canvas id="umid_atual"></canvas>
-                        </div>
-                        <div class="grafico">
-                            <canvas id="umid_semana"></canvas>
-                        </div>
-                    </div>
-                    <span>Está tudo bem com o Hectare A em relação a umidade</span>
-                    <div class="minmaxbarra">
-                        <div class="minmax">
-                            <span>Temperatura Máxima e <br>Mínima Diária do Hectare</span>
-                            <div class="imgMedida">
-                                <img src="assets/max.png"><span>10%</span>
+                        <div class="minmaxbarra">
+                            <div class="minmax">
+                                <span>Temperatura máxima e mínima <br>atual do Hectare</span>
+                                <div class="imgMedida">
+                                    <img src="assets/max.png"><span>27°C</span>
+                                </div>
+                                <div class="imgMedida">
+                                    <img src="assets/min.png"><span>20°C</span>
+                                </div>
                             </div>
-                            <div class="imgMedida">
-                                <img src="assets/min.png"><span>09%</span>
+                            <div class="graf_setores">
+                                <canvas id="barra_tempSetor"></canvas>
                             </div>
                         </div>
-                        <div class="graf_setores">
-                            <canvas id="barra_umidSetor"></canvas>
+                    </div>
+                    <div class="divisoes">
+                        <h3 class="blue">UMIDADE</h3>
+                        <div class="graficos">
+                            <div class="grafico">
+                                <canvas id="umid_atual"></canvas>
+                            </div>
+                            <div class="grafico">
+                                <canvas id="umid_semana"></canvas>
+                            </div>
+                        </div>
+                        <span>Está tudo bem com o Hectare A em relação a umidade</span>
+                        <div class="minmaxbarra">
+                            <div class="minmax">
+                                <span>Temperatura Máxima e <br>Mínima Diária do Hectare</span>
+                                <div class="imgMedida">
+                                    <img src="assets/max.png"><span>10%</span>
+                                </div>
+                                <div class="imgMedida">
+                                    <img src="assets/min.png"><span>09%</span>
+                                </div>
+                            </div>
+                            <div class="graf_setores">
+                                <canvas id="barra_umidSetor"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -151,18 +127,9 @@
                 <li class="">Home</li>
                 <li><a href="Serviços.html">Solução IoT</a></li>
                 <li><a href="Simulador.html">Simulador</a></li>
-                <li><a href="Login.html">Login</a></li>
-                <li><a href="Cadastro.html">Cadastro</a></li>
+                <li><a href="">Logout</a></li>
             </ul>
             <span id="span3">suport.cotton_analytics@gmail.com</span>
-            <!-- <div>
-                    Redes Sociais:
-                    <div class="redes">
-                    <img src="assets/facebook.png" alt="facebook" width="32px">
-                    <img src="assets/instagram.png" alt="Instagram" width="32px">
-                    <img src="assets/twitter.png" alt="Twitter" width="32px">
-                    </div>
-                </div> -->
         </div>
     </div>
     <!-- FOOTER -->
@@ -402,6 +369,7 @@
         type: 'line',
         data: data_umidAtual,
         options: {
+            maintainAspectRatio: false,
             scales: {
                 y: {
                     beginAtZero: true,
@@ -482,6 +450,7 @@
         type: 'line',
         data: data_umidSemana,
         options: {
+            maintainAspectRatio: false,
             scales: {
                 y: {
                     beginAtZero: true,
@@ -567,7 +536,9 @@
     const cfg_maxMinUmid = {
         type: 'bar',
         data: data_maxMinUmid,
-        options: {}
+        options: {
+            maintainAspectRatio: false
+        }
     };
 
 </script>
