@@ -32,13 +32,16 @@ body {
     font-family: 'Quicksand';
     font-size: 26px;
     font-weight: 700;
+
     align-self: center;
+
 }
 
 .nome_Empresa #span2 {
     font-family: 'Leckerli One', cursive;
     font-size: 26px;
     font-weight: 700;
+
     align-self: center;
 }
 
