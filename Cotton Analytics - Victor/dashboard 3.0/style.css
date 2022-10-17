@@ -157,6 +157,7 @@ body {
 .metricas1 img {
     /* border: solid 4px orange; */
     /* max-width: 70%; */
+    margin-top: 20px;
     width: 450px;
     height: 30px;
 }
@@ -199,6 +200,7 @@ body {
     height: 680px;
     align-self: center;
     margin-bottom: 4%;
+    margin-top: 2%;
 }
 
 .graphs h2 {
@@ -211,7 +213,7 @@ body {
 
 .graphs h3 {
     /* border: solid 4px purple; */
-    padding-top: 0.8%;
+    padding-top: 2%;
     padding-bottom: 2%;
     margin-block-start: 0em;
     margin-block-end: 0em;
@@ -242,7 +244,7 @@ body {
     /* border: solid 5px orange; */
     align-self: center;
     /* height: 300px; */
-    margin-top: 1%;
+    margin-top: 5%;
     text-align: center;
 }
 
@@ -254,7 +256,7 @@ body {
 .graphs span {
     /* border: solid 2px chartreuse; */
     align-self: center;
-    margin-top: 4%;
+    margin-top: 3%;
 }
 
 .minmaxbarra {
