@@ -87,19 +87,46 @@
 
 <script>
     function cadastrar() {
-        var razao = ipt_razao.value
-        var cnpj = ipt_cnpj.value
-        var tel1= ipt_tel1.value
-        var tel2 = ipt_tel2.value
-        var email = ipt_email.value
-        var pass = ipt_password.value
+        var nome = ipt_Nome.value
+        var sobrenome = ipt_Sobrenome.value
+        var cpf = Number(ipt_Cpf.value)
+        var token = ipt_Token.value
+        var email = ipt_Email.value
+        var pass = Number(ipt_Senha.value)
+        var passConfirm = Number(ipt_ConfSenha.value)
 
-        // alert('Funcionando')
-        if ((razao && cnpj && tel1 && tel2 && email && pass) == '') {
-            alert("Preencha todos os campos corretamente!")
+        if (nome == '') {
+            alert('Preencha o campo nome')
+
+        } else if (sobrenome == '') {
+            alert('Preencha o campo sobrenome')
+
+        } else if (cpf == '') {
+            alert('Preencha o campo CPF')
+
+        } else if (Number.isNaN(cpf)) {
+            alert('O campo CPF não pode ser texto')
+
+        } else if (token == '') {
+            alert('Preencha o campo do TOKEN')
+
+        } else if (email == '') {
+            alert('Preencha o campo do Email')
+
+        } else if (pass == '') {
+            alert('Preencha o campo senha')
+
+        } else if (passConfirm == '') {
+            alert('Preencha o campo de confirmação de senha')
+
+        } else {
+            alert('entou')
         }
-        else {
-            alert("Cadastrado com sucesso!")
-        }
+
+        ipt_Cpf.value = ''
+        ipt_Token.value = ''
+        ipt_Email.value = ''
+        ipt_Senha.value = ''
+        ipt_ConfSenha.value = '' 
     }
 </script>

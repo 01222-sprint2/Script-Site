@@ -60,7 +60,7 @@
 
                     <input id="ipt_password" type="password" placeholder="*******">
 
-                    <button onclick="validacao()">Entrar</button>
+                    <button onclick="login()">Entrar</button>
                 </div>
             </div>
         </div>
@@ -96,40 +96,30 @@
 </html>
 
 <script>
-    function validacao() {
+    function login() {
+
         var user = ipt_email.value
+        var pass = ipt_password.value
 
         if (user == '') {
             alert('Preencha o campo user com o seu e-mail')
 
-        } else {
-            if (user != "cottonanalytics.com") {
-                alert('Email incorreto')
+        } else if (user != "cottonanalytics.com") {
+            alert('Email incorreto')
 
-            } else {
-                validacao2()
-            }
+        } else if (pass == '') {
+            alert('Preencha o campo senha')
+
+        } else if (pass != "cottonanalytics") {
+            alert("Senha incorreta")
+
+        } else {
+            alert('certo')
         }
+
         ipt_email.value = ''
         ipt_password.value = ''
     }
 
-    function validacao2() {
-        var pass = ipt_password.value
 
-        if (pass == '') {
-            alert('Preencha o campo senha')
-
-        } else {
-
-            if (pass != "cottonanalytics") {
-                alert("Senha incorreta")
-            } else {
-                alert('certo')
-            }
-
-            ipt_email.value = ''
-            ipt_password.value = ''
-        }
-    }
 </script>
