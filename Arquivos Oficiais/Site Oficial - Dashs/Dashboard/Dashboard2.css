@@ -80,7 +80,7 @@ body {
 
 .sections {
     /* border: solid 5px green; */
-    height: 1900px;
+    height: 2200px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -90,39 +90,26 @@ body {
 .graphsmenu {
     display: flex;
     flex-direction: column;
-    /* border: solid 5px blue; */
     width: 80%;
 }
 
 /* ###################################################### INÍCIO MÉTRICAS DOS ALERTAS ###################################################### */
 .topsection {
-    /* border: solid 4px slateblue; */
     display: flex;
     flex-direction: column;
     height: 245px;
 }
 
 .metricas1 {
-    /* border: solid 5px gold; */
-    /* display: flex; */
     width: auto;
     align-self: center;
-    /* margin: auto; */
-    /* margin-top: 1%; */
-    /* justify-content: center; */
-    /* align-items: center; */
 }
 
 .metricas1 img {
-    /* border: solid 4px orange; */
-    /* max-width: 70%; */
-    /* margin-top: 20px; */
-    /* width: 450px; */
     height: 65%;
 }
 
 .metricas2 {
-    /* border: solid 5px darkcyan; */
     display: flex;
     flex-direction: column;
     padding-top: 20px;
@@ -134,8 +121,6 @@ body {
     max-width: 50%;
     width: 100%;
     height: auto;
-    /* width: 45%;
-    height: 45%; */
     margin: 15px 0;
 }
 /* ###################################################### FIM MÉTRICAS DOS ALERTAS ###################################################### */
@@ -143,14 +128,12 @@ body {
 
 /* ###################################################### INÍCIO GRÁFICOS/TEMPERATURA/UMIDADE ###################################################### */
 .graphs {
-    /* border: solid 5px darkturquoise; */
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
 .big {
-    /* border: solid 2px #FD6A2B; */
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -164,23 +147,48 @@ body {
     display: flex;
     flex-direction: column;
     width: 86%;
-    /* height: 700px; */
     align-self: center;
-    /* margin-bottom: 4%; */
-    /* margin-top: 2%; */
+    height: 45%;
+}
+
+.setor_significado{
+    font-family: 'Quicksand';
+    display: flex;
+    width: 800px;
+    height: 100px;
+    align-items: center;
+}
+
+.setor_significado span{
+    align-items: center;
+    margin-right: 10px;
+}
+
+.divisoes .msg_setor {
+    margin-top: 5px;
+    border: solid 3px #0D7980;
+    background-color: #fff;
+    padding: 15px;
+    display: none;
+    width: 400px;
+  }
+
+.divisoes span:hover + .msg_setor {
+    display: block;
+  }
+
+.setor_significado b{
+    color: #0D7980;
 }
 
 .graphs h2 {
-    /* border: solid 4px purple; */
     font-size: 210%;
     font-family: 'Cairo';
     align-self: center;
-    /* margin-block-start: 0em; */
     margin-block-end: 0em;
 }
 
 .graphs h3 {
-    /* border: solid 4px purple; */
     padding-top: 2%;
     padding-bottom: 2%;
     margin-block-start: 0em;
@@ -191,44 +199,35 @@ body {
 }
 
 .graficos {
-    /* border: solid 4px red; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     height: 250px;
-    
+    margin-bottom: 30px;
 }
 
 .grafico {
-    /* border: solid 2px aqua; */
     display: flex;
     flex-direction: column;
     width: 40%;
-    /* align-self: center; */
-    /* position: relative; */
 }
 
 .texto {
-    /* border: solid 5px orange; */
     align-self: center;
-    /* height: 300px; */
     margin-top: 2%;
     text-align: center;
 }
 
 .texto .central {
     align-self: center;
-    /* border: solid 2px #000; */
 }
 
 .graphs span {
-    /* border: solid 2px chartreuse; */
     align-self: center;
     margin-top: 3%;
 }
 
 .minmaxbarra {
-    /* border: solid 4px cornflowerblue; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -237,15 +236,12 @@ body {
     width: 84%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3%;
     margin-bottom: 2%;
 }
 
 .minmax {
-    /* border: solid 2px black; */
     display: flex;
     flex-direction: column;
-    /* height: 40%; */
 }
 
 .minmax span {
@@ -254,7 +250,6 @@ body {
 }
 
 .imgMedida {
-    /* border: solid 2px black; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -262,7 +257,6 @@ body {
 }
 
 .imgMedida img {
-    /* border: solid 2px black; */
     margin-right: 3%;
 }
 

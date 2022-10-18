@@ -166,7 +166,7 @@ body {
 /* ######################################################## FIM DAS MÉTRICAS ########################################################## */
 
 .caixa {
-    width: 75%;
+    width: 60%;
     height: 100%;
     margin: auto;
     margin-top: 0%;
@@ -222,6 +222,24 @@ body {
     border-radius: 10px;
 }
 
+.caixatopo1 a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Isso anima a bolinha */
+@keyframes animate{
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+
 .caixatopo1 .bolinha1 {
     background-color: #F91A1A;
     width: 16px;
@@ -229,7 +247,9 @@ body {
     border-radius: 100px;
     margin-left: 90%;
     margin-top: 2%;
+    animation: animate 0.75s linear infinite;
 }
+
 
 .caixatopo1 .sensores {
     font-family: 'Quicksand';
@@ -262,6 +282,7 @@ body {
     border-radius: 100px;
     margin-left: 90%;
     margin-top: 2%;
+    animation: animate 0.75s linear infinite;
 }
 
 .caixatopo2 .sensores {
@@ -295,6 +316,7 @@ body {
     border-radius: 100px;
     margin-left: 90%;
     margin-top: 2%;
+    animation: animate 0.75s linear infinite;
 }
 
 .caixatopo3 .sensores {
@@ -346,6 +368,7 @@ body {
     border-radius: 100px;
     margin-left: 90%;
     margin-top: 2%;
+    animation: animate 0.75s linear infinite;
 }
 
 .caixatopo4 .sensores {
@@ -379,6 +402,7 @@ body {
     border-radius: 100px;
     margin-left: 90%;
     margin-top: 2%;
+    animation: animate 0.75s linear infinite;
 }
 
 .caixatopo5 .sensores {
@@ -412,6 +436,7 @@ body {
     border-radius: 100px;
     margin-left: 90%;
     margin-top: 2%;
+    animation: animate 0.75s linear infinite;
 }
 
 .caixatopo6 .sensores {
