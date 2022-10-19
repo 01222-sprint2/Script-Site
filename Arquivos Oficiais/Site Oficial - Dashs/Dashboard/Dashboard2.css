@@ -154,14 +154,9 @@ body {
 .setor_significado{
     font-family: 'Quicksand';
     display: flex;
-    width: 800px;
-    height: 100px;
-    align-items: center;
-}
-
-.setor_significado span{
-    align-items: center;
-    margin-right: 10px;
+    flex-direction: column;
+    text-align: center;
+    height: 20%;
 }
 
 .divisoes .msg_setor {
@@ -171,6 +166,7 @@ body {
     padding: 15px;
     display: none;
     width: 400px;
+    margin: auto;
   }
 
 .divisoes span:hover + .msg_setor {
@@ -236,7 +232,6 @@ body {
     width: 84%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2%;
 }
 
 .minmax {

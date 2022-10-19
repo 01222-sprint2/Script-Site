@@ -180,6 +180,10 @@
     margin-top: 24px;
 }
 
+button:hover{
+    box-shadow: -3px 3px 3px #6d3c20;
+}
+
  /* .banner {
     height: 780px;
     display: flex;
