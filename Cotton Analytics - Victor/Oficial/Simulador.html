@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador</title>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/apple-touch-icon.png">
     <link rel="stylesheet" href="estilos_Simulador.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,18 +35,19 @@
             </ul>
         </div>
     </div>
-   
+
 
     <div class="section1">
         <div class="container">
             <div class="boxes">
-                <h1 class="sim">Simulador</h1>
                 <div id="div_conteudo" class="conteudo">
+                    <h1 class="sim">Simulador</h1>
                     <p>
                         O fungo chamado ramulária é um dos maiores inimigos da produção de algodão <br>
                         e é favorecido por condições de alta umidade e em temperaturas entre 25℃ e 30℃. <br>
                         Na safra 2019/2020, o fungo causou um prejuízo de R$ 1,89 bilhões ao setor <br>
-                        tendo o potencial de perda das lavouras de algodão em 35%.
+                        tendo o potencial de perda das lavouras de algodão em 35%. <br>
+                        (ABRAPA - 2021)
                     </p>
                     <h3>Para simular um futuro prejuízo de sua colheita, iremos solicitar alguns dados:</h3>
                     <br>
@@ -60,7 +62,7 @@
                         </span>
                         <span class="linha">
                             <span class="labels">
-                                Qtd em @(15Kg) produzidas por safra:
+                                Quantidade em @(15Kg) produzidas por safra:
                             </span>
                             <span class="inputs">
                                 <input type="text" id="ipt_pesoA" placeholder="Peso em @">
@@ -93,25 +95,27 @@
                     <button onclick="calcular()">Simular</button>
                 </div>
                 <div id="div_mensagem" class="resultado">
-                    <h1>Expectativa para a sua safra sem a cottonAnalytics</h1>
-                    <span>Na sua última <b>safra</b> você teve a colheita de <b id="b_pesoArrobasAmostras"></b> @ de algodão,</span>
-                    <span>isso corresponde a <b id="b_pesoDivHectar"></b>@ produzidos em cada um dos seus hectares,</span>
-                    <span>o que indica que você tende a perder R$<b id="b_aux_perda"></b> reais em receita bruta.</span>
-                    <span>Contudo, essa possível perda pode ser controlada com a nossa tecnologia, </span>
-                    <span>revertendo esse prejuízo, totalizando uma receita de R$<b id="b_valor_total"></b> reais</span>
-
+                    <h1>Expectativa para a sua safra sem a CottonAnalytics:</h1>
+                    <p style="text-align: center;">
+                    Na sua última <b>safra</b> você teve a colheita de <b id="b_pesoArrobasAmostras"></b> @ de
+                    algodão, isso <br>
+                    corresponde a <b id="b_pesoDivHectar"></b>@ produzidos em cada um dos seus hectares,
+                    <br>
+                    o que indica que você tende a perder R$<b id="b_aux_perda"></b> reais em receita bruta.
+                    <br>
+                    Contudo, essa possível perda pode ser controlada com a nossa tecnologia,<br>
+                    revertendo esse prejuízo em 30%, totalizando uma receita de R$<b id="b_valor_total"></b> reais
+                    </p>
                     <h1>Projeção para anos futuros com <b id="b_porcentagem"></b>% de perda</h1>
-                    <span>Em 2 safras você deixa de receber R$<b id="b_aux_perda2"></b>, que poderiam ser revertidos e
-                        agregar
-                        a uma receita bruta de R$<b id="b_valor_total2"></b></span>
-                    <span>Em 4 safras você deixa de receber R$<b id="b_aux_perda4"></b>, que poderiam ser revertidos e
-                        agregar
-                        a uma receita bruta de R$<b id="b_valor_total4"></b></span>
-                    <span>Em 7 safras você deixa de receber R$<b id="b_aux_perda7"></b>, que poderiam ser revertidos e
-                        agregar
-                        a uma receita bruta de R$<b id="b_valor_total7"></b></span>
-                    <span>Em 10 safras você deixa de receber R$<b id="b_aux_perda10"></b>, que poderiam ser revertidos e
-                        agregar a uma receita bruta de R$<b id="b_valor_total10"></b></span>
+
+                    <!-- INICIO DO GRÁFICO -->
+                    <div class="graficos" >
+                        <div class="container_grafico">
+                            <canvas id="grafico"></canvas>
+                        </div>
+                    </div>
+
+
                     <button onclick="retornar()">Fazer outra simulação</button>
                 </div>
             </div>
@@ -170,15 +174,16 @@
     var porcentagem = 0;
     var aux_perda = 0;
     var valor_total = 0;
+    var aux_perda = 0;
 
     function calcular() {
         var valor = Number(ipt_ValorA.value);
         hectares = Number(ipt_hectares.value);
+        pesoArrobasAmostras = Number(ipt_pesoA.value);
 
         porcentagem = sel_porc.value;
-        pesoArrobasAmostras = ipt_pesoA.value;
 
-        if ((valor && hectares && pesoArrobasAmostras) == '' || porcentagem == '0'){
+        if ((valor && hectares && pesoArrobasAmostras) == '' || Number.isNaN(valor && hectares && pesoArrobasAmostras) || porcentagem == '0') {
             alert("Preencha todos os campos corretamente!")
         } else if (hectares < 0) {
             alert("O número de hectares não pode ser igual ou menor que zero")
@@ -190,7 +195,7 @@
             perda = pesoArrobasAmostras * porcentagem / 100;
             valor_total = pesoArrobasAmostras * valor;
             aux_perda = perda * valor;
-    
+
             exibir()
         }
     }
@@ -202,6 +207,7 @@
         ipt_hectares.value = ""
         ipt_pesoA.value = ""
         sel_porc.value = "0"
+        aux_perda = 0;
     }
 
     function exibir() {
@@ -209,31 +215,55 @@
         div_mensagem.style.display = "flex"
         b_pesoArrobasAmostras.innerHTML = `${pesoArrobasAmostras}`
         b_pesoDivHectar.innerHTML = `${(pesoArrobasAmostras / hectares).toFixed(2)}`
-        b_porcentagem.innerHTML = `${porcentagem}`
         b_aux_perda.innerHTML = `${aux_perda.toFixed(2)}`
-        b_aux_perda2.innerHTML = `${(2 * aux_perda).toFixed(2)}`
-        b_aux_perda4.innerHTML = `${(4 * aux_perda).toFixed(2)}`
-        b_aux_perda7.innerHTML = `${(7 * aux_perda).toFixed(2)}`
-        b_aux_perda10.innerHTML = `${(10 * aux_perda).toFixed(2)}`
-        b_valor_total.innerHTML = `${valor_total.toFixed(2)}`
-        b_valor_total2.innerHTML = `${(2 * valor_total).toFixed(2)}`
-        b_valor_total4.innerHTML = `${(4 * valor_total).toFixed(2)}`
-        b_valor_total7.innerHTML = `${(7 * valor_total).toFixed(2)}`
-        b_valor_total10.innerHTML = `${(10 * valor_total).toFixed(2)}`
-        pre_res.innerHTML = `<h1>Expectativa para a sua safra sem a CottonTech</h1>
-                             Sua produtividade estimada seria de ${pesoArrobasAmostras}@ de algodão em toda a safra
-                             <br>Por hectar, você teria uma colheita de ${(pesoArrobasAmostras / hectares).toFixed(2)}@/hectar
-                             <br>Porém, caso não ocorra um monitoramento e consequentemente a manutenção adequada dos níveis de umidade e temperatura   da sua lavoura,
-                             você corre o risco de perder aproximadamente ${porcentagem}% dessa colheita, que seria em torno de ${perda.toFixed(2)}@ de algodão ou 
-                             um deficit de ${aux_perda.toFixed(2)} em receita bruta.
-                             Contudo, essa perda pode ser contornada usando nossos produtos, fazendo assim você receber o retorno total esperado de R$${valor_total.toFixed(2)}
-                             `
+        b_porcentagem.innerHTML = `${porcentagem}`
+        
+        var revert_30per = 2 * aux_perda * 0.3;
+        var revert_45per = 4 * aux_perda * 0.45;
+        var revert_55per = 7 * aux_perda * 0.59;
+        var revert_68per = 10 * aux_perda * 0.68;
+        
+        var total_2Safras = 2 * aux_perda;
+        var total_4Safras = 4 * aux_perda;
+        var total_7Safras = 7 * aux_perda;
+        var total_10Safras = 10 * aux_perda;
+        
+        b_valor_total.innerHTML = `${(valor_total-revert_30per).toFixed(2)}`
 
-        pre_res.innerHTML += `<h1>Projeção para anos futuros com ${porcentagem}% de perda</h1>
-                             Em 2 safras você deixa de receber R$${(2 * aux_perda).toFixed(2)}, que poderiam ser revertidos e agregar a uma receita bruta de R$${(2 * valor_total).toFixed(2)} 
-                             Em 4 safras você deixa de receber R$${(4 * aux_perda).toFixed(2)}, que poderiam ser revertidos e agregar a uma receita bruta de R$${(4 * valor_total).toFixed(2)} 
-                             Em 7 safras você deixa de receber R$${(7 * aux_perda).toFixed(2)}, que poderiam ser revertidos e agregar a uma receita bruta de R$${(7 * valor_total).toFixed(2)} 
-                             Em 10 safras você deixa de receber R$${(10 * aux_perda).toFixed(2)}, que poderiam ser revertidos e agregar a uma receita bruta de R$${(10 * valor_total).toFixed(2)} 
-                             `
+        /*INICIO GRÁFICO*/
+
+        var Valor_Revertido = {
+        
+            label: 'Com a CottonAnalytics',
+            backgroundColor: 'rgb(0,255,0)',
+            boderColor: 'green',
+            data: [(total_2Safras-revert_30per).toFixed(2), (total_4Safras-revert_45per).toFixed(2),(total_7Safras-revert_55per).toFixed(2),(total_10Safras-revert_68per).toFixed(2)],
+        };
+    
+        var Valor_Perdido ={
+
+            label: 'Sem a CottonAnalytics',
+            backgroundColor: 'rgb(255,0,0)',
+            boderColor: 'red',
+            data:[total_2Safras.toFixed(2), total_4Safras.toFixed(2), total_7Safras.toFixed(2), total_10Safras.toFixed(2)],
+        };
+
+
+        var speedData = {
+            labels: ['2 Safras','4 Safras','7 Safras','10 Safras',],
+            datasets: [Valor_Perdido, Valor_Revertido]
+        };
+
+
+    const config = {
+        type: 'line',
+        data: speedData,
+        options: {}
+    };
+
+    const grafico = new Chart(
+        document.getElementById('grafico'),
+        config
+        );
     }
 </script>

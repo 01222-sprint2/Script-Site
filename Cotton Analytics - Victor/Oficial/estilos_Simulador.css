@@ -152,7 +152,7 @@ body {
     /* border: solid 4px chartreuse;    */
     margin: 0;
     font-family: 'Questrial';
-    font-size: 38px;
+    font-size: 32px;
 }
 
 .conteudo {
@@ -163,7 +163,7 @@ body {
 }
 
 .conteudo p {
-    font-size: 25px;
+    font-size: 22px;
 }
 
 
@@ -263,7 +263,7 @@ input::placeholder {
     align-self: center;
     margin-top: 0px;
     font-family: 'Cairo';
-    font-size: 38px;
+    font-size: 32px;
 }
 
 .boxes .resultado {
@@ -276,8 +276,8 @@ input::placeholder {
 }
 
 
-.resultado span {
-    font-size: 25px;
+.resultado p {
+    font-size: 22px;
     /* border: solid 5px black; */
     margin: 10px 0px;
 }
@@ -293,6 +293,20 @@ input::placeholder {
     background-color: #A56037;
     color: white;
     font-size: 24px;
+
+}
+
+
+.container_grafico {
+    background-color: rgba(255, 255, 255, 0.46);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.graficos {
+    height: 400px;
+    width: 700px;
 
 }
 
