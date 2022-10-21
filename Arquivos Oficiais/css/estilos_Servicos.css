@@ -78,7 +78,7 @@ body {
 .banner {
     display: flex;
     height: 500px;
-    background-image: url(https://img.freepik.com/fotos-premium/ramo-de-algodao-florescendo-na-mesa_23-2148287624.jpg?w=2000);
+    background-image: url(../assets/Background.png);
     color: white;
     background-size: cover;
     
