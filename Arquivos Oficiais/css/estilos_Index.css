@@ -75,7 +75,7 @@ body {
 /* Banner */
 .banner {
     padding: 40px 0;
-    background-image: url("/assets/imagem_banner.jpg");
+    background-image: url(../assets/imagem_banner.jpg);
     background-size: cover;
     height: 500px;
     background-position: center;
