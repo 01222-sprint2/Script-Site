@@ -75,7 +75,7 @@ body {
 /* Banner */
 .banner {
     padding: 40px 0;
-    background-image: url("assets/imagem_banner.jpg");
+    background-image: url("/assets/imagem_banner.jpg");
     background-size: cover;
     height: 500px;
     background-position: center;
@@ -149,6 +149,9 @@ body {
     font-size: 22px;
     margin-top: 24px;
 }
+.contexto button:hover{
+    box-shadow: -3px 3px 3px #6d3c20;
+}
 
 /* Missão Valores */
 
@@ -156,7 +159,7 @@ body {
     height: 1150px;
     display: flex;
     align-items: center;
-    background-image: url("assets/backgorund_vetor.png") ;
+    background-image: url(../assets/backgorund_vetor.png) ;
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 100px;
@@ -191,7 +194,7 @@ body {
     font-size: 30px;
     margin-block-start: 0;
     margin-block-end: 0;
-    /* margin-top: 10px; */
+    margin-top: 20px;
     /* padding: 10px; */
 }
 
@@ -227,10 +230,6 @@ body {
     /* border: solid 10px green; */
 }
 
-.caixa #inp_msg {
-    height: 136px;
-    /* margin-bottom: 55px; */
-}
 
 .caixa input {
     padding: 7px 10px;
@@ -247,6 +246,27 @@ body {
 }
 
 .caixa input::placeholder {
+    color: rgb(255, 255, 255, 0.6);
+    font-family: 'Quicksand';
+    font-size: 30px;
+}
+
+.caixa textarea {
+    padding: 7px 10px;
+    margin-top: 13px;
+    height: 151px;
+    width: 382px;
+    font-family: 'Quicksand';
+    font-size: 26px;
+    border: 0;
+    border-style: none;
+    border-radius: 100px;
+    background: #19403C;
+    color: white;
+    border-radius: 8px;
+}
+
+.caixa textarea::placeholder {
     color: rgb(255, 255, 255, 0.6);
     font-family: 'Quicksand';
     font-size: 30px;
@@ -294,6 +314,9 @@ body {
     width: 164px;
     font-size: 22px;
     margin-top: 24px;
+}
+.caixa button:hover{
+    box-shadow: -3px 3px 3px #6d3c20;
 }
 
 /* Rodapé */

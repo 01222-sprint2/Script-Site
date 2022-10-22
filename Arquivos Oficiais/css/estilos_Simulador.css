@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-image: url("assets/imagem_banner.jpg");
+    background-image: url("/assets/imagem_banner.jpg");
     background-size: cover;
     /* min-height: 535px; */
     background-position: center;
@@ -28,7 +28,6 @@ body {
     background-color: #0D7980;
     height: 70px;
     color: #ffffff;
-
 }
 
 /* Respiro da Página, margin auto para o sistema do pc que decidir como fica a alteração */
@@ -47,7 +46,7 @@ body {
     display: flex;
 }
 
-.nome_Empresa a {
+.nome_Empresa a{
     color: #FFFFFF;
     text-decoration: none;
 }
@@ -89,8 +88,8 @@ body {
 }
 
 .navbar a {
-    color: #FFFFFF;
-    text-decoration: none;
+   color: #FFFFFF;
+   text-decoration: none;
 }
 
 /* .header {
@@ -149,12 +148,11 @@ body {
     padding: 30px;
 
 }
-
 .boxes h1 {
     /* border: solid 4px chartreuse;    */
     margin: 0;
     font-family: 'Questrial';
-    font-size: 38px;
+    font-size: 32px;
 }
 
 .conteudo {
@@ -165,7 +163,7 @@ body {
 }
 
 .conteudo p {
-    font-size: 25px;
+    font-size: 22px;
 }
 
 
@@ -220,7 +218,7 @@ body {
     border: none;
     border-radius: 8px;
     background: #19403C;
-    color: rgb(255, 255, 255, 0.6);
+    color: rgb(255,255,255,0.6);
     font-family: 'Quicksand';
 }
 
@@ -249,10 +247,13 @@ input {
     font-size: 24px;
 
 }
+.boxes button:hover{
+    box-shadow: -3px 3px 3px #6d3c20;
+}
 
 
 input::placeholder {
-    color: rgb(255, 255, 255, 0.6);
+    color: rgb(255,255,255,0.6);
     font-family: 'Quicksand';
     /* font-size: 30px; */
 }
@@ -265,7 +266,7 @@ input::placeholder {
     align-self: center;
     margin-top: 0px;
     font-family: 'Cairo';
-    font-size: 38px;
+    font-size: 32px;
 }
 
 .boxes .resultado {
@@ -278,8 +279,8 @@ input::placeholder {
 }
 
 
-.resultado span {
-    font-size: 25px;
+.resultado p {
+    font-size: 22px;
     /* border: solid 5px black; */
     margin: 10px 0px;
 }
@@ -297,11 +298,9 @@ input::placeholder {
     font-size: 24px;
 
 }
-
-/* ====================================== FIM DO RESULTADO ======================================== */
-
-
-/*======================================= INICIO DO GRÁFICO =======================================*/
+.resultado button:hover{
+    box-shadow: -3px 3px 3px #6d3c20;
+}
 
 
 .container_grafico {
@@ -312,11 +311,14 @@ input::placeholder {
 }
 
 .graficos {
-    border: solid 3px black;
     height: 400px;
     width: 700px;
-    
+
 }
+
+/* ====================================== FIM DO RESULTADO ======================================== */
+
+
 
 /* ====================================== INICIO DO FOOTER ======================================== */
 
@@ -337,7 +339,7 @@ input::placeholder {
 
 }
 
-.logo a {
+.logo a{
     color: #FFFFFF;
     text-decoration: none;
 }

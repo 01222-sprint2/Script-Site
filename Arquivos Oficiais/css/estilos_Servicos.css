@@ -78,7 +78,7 @@ body {
 .banner {
     display: flex;
     height: 500px;
-    background-image: url(https://img.freepik.com/fotos-premium/ramo-de-algodao-florescendo-na-mesa_23-2148287624.jpg?w=2000);
+    background-image: url("/assets/imagem_banner.jpg");
     color: white;
     background-size: cover;
     
@@ -131,13 +131,19 @@ body {
 .conteudo .container #img_solucao {
     width: 400px;
     height: 306px;
+
+    /* Se a imagem ficar muito clara usar esse código */
+    padding-right: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode:darken;
+    border-radius: 20px;
 }
 
 .conteudo p {
     margin: 0;
     text-align: justify;
     flex-direction: column;
-    font-size: 30px;
+    font-size: 27px;
     font-family: 'Questrial';
 }
 
@@ -169,10 +175,11 @@ body {
 }
 
 .box {
-    margin: 0px 10px 10px 10px;
+    margin: 0px 10px 10px px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: #A7BDBD;
     width: 381px;
     font-family: 'Cairo';
@@ -192,8 +199,7 @@ body {
     font-size: 22px;
     height: 117px;
     width: 313px;
-    margin-top: 30px;
-    padding: 10px;
+ 
 }
 
 .box img {

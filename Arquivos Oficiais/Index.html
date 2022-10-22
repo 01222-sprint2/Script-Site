@@ -10,7 +10,7 @@
     <!-- Link para colocar icone na guia da página, type e sizes a príncipio não precisa mas são padrões
  para dizer que o tipo do icon é aquele e o tamanho que ele ocupará -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="estilos_Index.css">
+    <link rel="stylesheet" href="css/estilos_Index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -80,17 +80,16 @@
                 <div class="box">
                     <h4>VALORES</h4>
                     <img src="assets/imagem_valores.svg" alt="Icone Valores">
-                    <p><strong>Qualidade de nossos produtos e serviços;
-                            Segurança é inegociável;
+                    <p><strong>Qualidade de nossos produtos e serviços; <br>
+                            Segurança é inegociável; <br>
                             Respeito para todos, dentro e fora da empresa;</strong></p>
                 </div>
             </div>
             <div class="caixa">
                 <h2>Alguma dúvida? Entre em contato:</h2>
-                <Input type="text" placeholder="Nome:">
-                <Input type="email" placeholder="E-mail:">
-                <Input type="text" placeholder="Assunto:">
-                <Input type="text" placeholder="Mensagem:" id="inp_msg">
+                <Input id="ipt_nome" type="text" placeholder="Nome:" onchange="semBorder1()">
+                <Input id="ipt_email" type="email" placeholder="E-mail:" onchange="semBorder2()">
+                <textarea id="txta_Menssagem"type="text" placeholder="Menssagem:" onchange="semBorder3()"></textarea>
                     <button onclick="Enviar()">Enviar</button>
             </div>
         </div>
@@ -124,5 +123,73 @@
 
 </html>
 <script>
-    // Fazer validação do Button Enviar
+
+    function Enviar() {
+        var Nome = ipt_nome.value;
+        var Email = ipt_email.value;
+        var Menssagem = txta_Menssagem.value;
+
+        if (Nome == "" && Email == "" && Menssagem == "") {
+            ipt_email.style.border = "2px solid red";
+            ipt_nome.style.border = "2px solid red";
+            txta_Menssagem.style.border = "2px solid red";
+            alert(`Preencha TODOS os campos!`);
+
+        } else if(Nome == "" && Email == "") {
+            txta_Menssagem.style.border = "0";
+            ipt_email.style.border = "2px solid red";
+            ipt_nome.style.border = "2px solid red";
+            alert(`Preencha seu NOME e seu EMAIL!`);
+
+        } else if(Email == "" && Menssagem == "") {
+            ipt_nome.style.border = "0";
+            ipt_email.style.border = "2px solid red";
+            txta_Menssagem.style.border = "2px solid red";
+            alert(`Preencha seu EMAIL e escreva sua MENSAGEM!`);
+        
+        } else if(Nome == "" && Menssagem == "") {
+            ipt_email.style.border = "0";
+            ipt_nome.style.border = "2px solid red";
+            txta_Menssagem.style.border = "2px solid red";
+            alert(`Preencha seu NOME e escreva sua MENSAGEM!`);
+
+        } else if(Nome == "") {
+            txta_Menssagem.style.border = "0";
+            ipt_email.style.border = "0";
+            ipt_nome.style.border = "2px solid red";
+            alert(`Preencha seu NOME!`);
+
+        } else if(Email == "") {
+            txta_Menssagem.style.border = "0";
+            ipt_nome.style.border = "0";
+            ipt_email.style.border = "2px solid red";
+            alert(`Preencha seu EMAIL!`);
+
+        } else if(Menssagem == "") {
+            ipt_nome.style.border = "0";
+            ipt_email.style.border = "0";
+            txta_Menssagem.style.border = "2px solid red";
+            alert(`Escreva sua MENSAGEM!`);
+
+        } else {
+            ipt_email.style.border = "0";
+            ipt_nome.style.border = "0";
+            txta_Menssagem.style.border = "0";
+            alert(`Email enviado com sucesso! Fique atento a sua caixa de entrada pois entraremos em contato em breve!`)
+        }
+
+    }
+
+   
+    function semBorder1() {
+        ipt_nome.style.border = "0";
+    }
+
+    function semBorder2() {
+        ipt_email.style.border = "0";
+    }
+    
+    function semBorder3() {
+        txta_Menssagem.style.border = "0";
+    }
 </script>
