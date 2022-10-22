@@ -13,6 +13,11 @@ body {
     color: #ffffff;
 }
 
+#analytics{
+    font-weight: bold;
+    font-family: 'Leckerli One', cursive;
+}
+
 /* Respiro da Página, margin auto para o sistema do pc que decidir como fica a alteração */
 .container {
     margin: auto;
@@ -134,7 +139,7 @@ body {
     font-size: 30px;
     width: 703px;
     height: 243;
-    text-align: justify;
+    text-align: left;
     justify-content: left;
 }
 
