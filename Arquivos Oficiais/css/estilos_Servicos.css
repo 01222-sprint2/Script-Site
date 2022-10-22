@@ -125,16 +125,16 @@ body {
 .conteudo_column {
     display: flex;
     flex-direction: column;
-    width: 670px;
+    width: 540px;
 }
 
 .conteudo .container #img_solucao {
-    width: 390px;
+    width: 400px;
     height: 260px;
 
     /* Se a imagem ficar muito clara usar esse código */
     padding-right: 10px;
-    background-color: rgba(0, 0, 0, 0.2);
+    
     background-blend-mode:darken;
     border-radius: 20px;
 }
@@ -143,14 +143,16 @@ body {
     margin: 0;
     text-align: justify;
     flex-direction: column;
-    font-size: 26px;
+    font-size: 22px;
+    line-height: 130%;
     font-family: 'Questrial';
+    
 }
 
 .conteudo h2 {
     margin: 0;
     font-size: 50px;
-    text-align: left;
+    text-align: center;
     font-family: 'Cairo';
 }
 
@@ -160,6 +162,7 @@ body {
 
     height: 600px;
     display: flex;
+    padding: 28px;
 }
 
 .social p {
@@ -174,15 +177,15 @@ body {
 }
 
 .box {
-    margin: 0px 10px 10px px;
+    padding: 20px;
+    margin: 50px 10px 10px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     background-color: #A7BDBD;
-    width: 381px;
+    width: 380px;
     font-family: 'Cairo';
-    height: 430px;
+    height: 380px;
     border-radius: 15px;
 }
 
@@ -198,12 +201,12 @@ body {
     font-size: 22px;
     height: 117px;
     width: 313px;
- 
+
 }
 
 .box img {
     margin-top: 20px;
-    width: 195px;
+    width: 200px;
     height: 127px;
 }
 

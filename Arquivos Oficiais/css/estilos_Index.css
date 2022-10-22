@@ -129,17 +129,18 @@ body {
 }
 
 .quem_somos .container img {
-    height: 280px;
-    width: 354px;
+    height: 300px;
+    width: 410px;
     justify-content: right;
 }
 
 .texto {
     font-family: 'Questrial', serif;
-    font-size: 30px;
-    width: 703px;
-    height: 243;
-    text-align: left;
+    font-size: 26px;
+    width: 560px;
+    height: 260;
+    line-height: 140%;
+    text-align: justify;
     justify-content: left;
 }
 
@@ -170,7 +171,7 @@ body {
     padding-bottom: 100px;
 }
 
-.social strong {
+.social p {
     text-align: center;
 }
 
@@ -203,7 +204,7 @@ body {
     /* padding: 10px; */
 }
 
-.box strong {
+.box p {
     font-family: 'Cairo';
     /* font-family: 'Questrial'; */
     font-size: 22px;
