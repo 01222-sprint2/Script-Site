@@ -97,12 +97,10 @@ body {
     width: 100%;
     background-color: #0D7980;
 }
-
 .header .container {
     display: flex;
     justify-content: space-between;
 }
-
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -143,9 +141,9 @@ body {
     align-items: center;
     /* width: 1199px;
     height: 850px; */
-    width: auto;
+    width: 70%;
     height: auto;
-    padding: 30px;
+    padding: 80px;
 
 }
 .boxes h1 {
@@ -163,7 +161,8 @@ body {
 }
 
 .conteudo p {
-    font-size: 22px;
+    font-size: 20px;
+    text-align: justify;
 }
 
 
