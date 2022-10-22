@@ -170,7 +170,7 @@ body {
     padding-bottom: 100px;
 }
 
-.social p {
+.social strong {
     text-align: center;
 }
 
@@ -203,7 +203,7 @@ body {
     /* padding: 10px; */
 }
 
-.box p {
+.box strong {
     font-family: 'Cairo';
     /* font-family: 'Questrial'; */
     font-size: 22px;

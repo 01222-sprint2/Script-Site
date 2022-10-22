@@ -106,7 +106,8 @@
                     Contudo, essa possível perda pode ser controlada com a nossa tecnologia,<br>
                     revertendo esse prejuízo em 30%, totalizando uma receita de R$<b id="b_valor_total"></b> reais
                     </p>
-                    <h1>Projeção para anos futuros com <b id="b_porcentagem"></b>% de perda</h1>
+                    
+                    <h2>Projeção para safras futuras com <b id="b_porcentagem"></b>% de perda pelo fungo:</h2>
 
                     <!-- INICIO DO GRÁFICO -->
                     <div class="graficos" >
@@ -217,18 +218,19 @@
         b_pesoDivHectar.innerHTML = `${(pesoArrobasAmostras / hectares).toFixed(2)}`
         b_aux_perda.innerHTML = `${aux_perda.toFixed(2)}`
         b_porcentagem.innerHTML = `${porcentagem}`
+        b_valor_total.innerHTML = `${(valor_total-(aux_perda*0.7)).toFixed(2)}`
         
-        var revert_30per = 2 * aux_perda * 0.3;
-        var revert_45per = 4 * aux_perda * 0.45;
-        var revert_55per = 7 * aux_perda * 0.59;
-        var revert_68per = 10 * aux_perda * 0.68;
+        var valor_totalPerda =  valor_total * (porcentagem / 100);
+        var total_2Safras = 2 * valor_totalPerda;
+        var total_4Safras = 4 * valor_totalPerda;
+        var total_7Safras = 7 * valor_totalPerda;
+        var total_10Safras = 10 * valor_totalPerda;
+
+        var revert_30per =  total_2Safras + (2 * (aux_perda * 0.7));
+        var revert_45per = total_4Safras + (4 * aux_perda * 0.55);
+        var revert_55per = total_7Safras + (7 * aux_perda * 0.41);
+        var revert_68per = total_10Safras + (10 * aux_perda * 0.32);
         
-        var total_2Safras = 2 * aux_perda;
-        var total_4Safras = 4 * aux_perda;
-        var total_7Safras = 7 * aux_perda;
-        var total_10Safras = 10 * aux_perda;
-        
-        b_valor_total.innerHTML = `${(valor_total-revert_30per).toFixed(2)}`
 
         /*INICIO GRÁFICO*/
 
@@ -237,7 +239,7 @@
             label: 'Com a CottonAnalytics',
             backgroundColor: 'rgb(0,255,0)',
             boderColor: 'green',
-            data: [(total_2Safras-revert_30per).toFixed(2), (total_4Safras-revert_45per).toFixed(2),(total_7Safras-revert_55per).toFixed(2),(total_10Safras-revert_68per).toFixed(2)],
+            data: [revert_30per.toFixed(2), revert_45per.toFixed(2),revert_55per.toFixed(2),revert_68per.toFixed(2)],
         };
     
         var Valor_Perdido ={
