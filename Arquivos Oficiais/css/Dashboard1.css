@@ -93,7 +93,7 @@ body {
     flex-direction: column;
     padding: 0%;
     width: 70%;
-    height: 15%;
+    height: 8%;
     justify-content: space-between;
     margin-top: 20%;
     color: #FFFFFF;
@@ -113,13 +113,14 @@ body {
 
 .navbar_lateral li {
     font-family: 'Montserrat';
-    font-weight: 600;
+   
     font-size: 26px;
     list-style: none;
 }
 
 .navbar_lateral .aqui {
-    color: #0D7980;
+    color: black;
+    font-weight: bold;
 }
 
 /* ######################################################## FIM DA BARRA LATERAL ########################################################## */
@@ -197,27 +198,48 @@ body {
 }
 
 .cor_strong{
-    color: black;
-    animation: animate2 0.75s linear infinite;
+    
+    
+    color: #F91A1A;
+    
+}
+.cor_strong2{
+    
+    
+    color: #F8D51F;
+    
+}
+.cor_strong3{
+    
+    
+    color: #F8D51F;
+    
+}
+.cor_strong4{
+    
+    
+    color: #F91A1A;
+    
+}
+.cor_strong5{
+   
+    
+    color: #FF7E47;
+    
+}
+.cor_strong6{
+    
+    
+    color: #FF7E47;
     
 }
 
 .seus_hectares{
+    
     font-size: 20px;
     font-family: 'Montserrat';
 }
 
-@keyframes animate2{
-    0%{
-      opacity: 0;
-    }
-    50%{
-      opacity: 1;
-    }
-    100%{
-      opacity: 0;
-    }
-  }
 
 .fazenda .id .red {
     color: #F91A1A;
@@ -504,12 +526,16 @@ body {
     padding-bottom: 15px;
 
 }
+.logo{
+    margin: 10px
+}
 
 .logo #span1 {
     font-family: 'Quicksand';
     font-size: 26px;
     font-weight: 700;
     align-self: center;
+    
 }
 
 .logo #span2 {
@@ -535,6 +561,8 @@ body {
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 16px;
+    margin: 20px 15px
 }
+
 
 /* ######################################################## FIM DO FOOTER ########################################################## */

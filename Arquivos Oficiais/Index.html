@@ -68,14 +68,14 @@
                 <div class="box">
                     <h4>MISSÃO</h4>
                     <img src="assets/imagem_missao.png" alt="Icone de Missão">
-                    <p><strong>Através do monitoramento de temperatura e umidade , 
-                               proporcionar aos nossos clientes uma maior produtividade
-                               das suas safras.</strong></p>
+                    <p><strong> Proporcionar uma maior produtividade
+                               das suas safras, através do monitoramento de 
+                               temperatura e umidade.</strong></p>
                 </div>
                 <div class="box">
                     <h4>VISÃO</h4>
                     <img src="assets/imagem_visao.png" alt="Icone de Visão">
-                    <p><strong>Contribuir de forma acertiva para as
+                    <p><strong>Contribuir de forma assertiva para as
                                tomadas de decisão dos agricultores de algodão
                                por meio da inovação e tecnologia.</strong></p>
 
@@ -84,7 +84,7 @@
                     <h4>VALORES</h4>
                     <img src="assets/imagem_valores.png" alt="Icone Valores">
                     <p><strong>Respeito às pessoas e ao meio ambiente,
-                               colaboração ,
+                               colaboração,
                                ética, transparência, 
                                qualidade e eficiência.</strong></p>
                 </div>
@@ -170,14 +170,18 @@
             alert(`Preencha seu EMAIL!`);
 
         } else if(Menssagem == "") {
+            
             ipt_nome.style.border = "0";
             ipt_email.style.border = "0";
             txta_Menssagem.style.border = "2px solid red";
             alert(`Escreva sua MENSAGEM!`);
 
         } else {
+            ipt_email.value = ''
             ipt_email.style.border = "0";
+            ipt_nome.value = ''
             ipt_nome.style.border = "0";
+            txta_Menssagem.value = ''
             txta_Menssagem.style.border = "0";
             alert(`Email enviado com sucesso! Fique atento a sua caixa de entrada pois entraremos em contato em breve!`)
         }

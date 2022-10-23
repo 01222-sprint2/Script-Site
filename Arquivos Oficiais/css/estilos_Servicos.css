@@ -116,7 +116,8 @@ body {
     align-items: center;
 }
 
-.conteudo .container {    
+.conteudo .container {   
+    margin-top: 50px; 
     display: flex;
     justify-content: space-around;
     align-items: center;

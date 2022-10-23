@@ -96,7 +96,7 @@
                     <button onclick="calcular()">Simular</button>
                 </div>
                 <div id="div_mensagem" class="resultado">
-                    <h1 style="text-align: center;" >Expectativa com % de perda para a sua safra sem a CottonAnalytics:</h1>
+                    <h1 style="text-align: center;" >Expectativa com <b id="b_porcentagem"></b>% de perda da sua safra <br> sem a CottonAnalytics:</h1>
                     <p style="text-align: justify;">
                     Na sua última <b>safra</b> você teve a colheita de <b id="b_pesoArrobasAmostras"></b> @ de
                     algodão, 
@@ -107,7 +107,7 @@
                     Contudo, essa possível perda pode ser controlada com a
                     nossa tecnologia, revertendo esse prejuízo em 30%, totalizando uma receita de R$<b id="b_valor_total"></b> reais
                     </p>
-                    <h1>Projeção para anos futuros com <b id="b_porcentagem"></b>% de perda</h1>
+                    <h1>Projeção para anos futuros com <b id="b_porcentagem2"></b>% de perda</h1>
 
                     <!-- INICIO DO GRÁFICO -->
                     <div class="graficos" >
@@ -218,6 +218,7 @@
         b_pesoDivHectar.innerHTML = `${(pesoArrobasAmostras / hectares).toFixed(2)}`
         b_aux_perda.innerHTML = `${aux_perda.toFixed(2)}`
         b_porcentagem.innerHTML = `${porcentagem}`
+        b_porcentagem2.innerHTML = `${porcentagem}`
         
         var revert_30per = 2 * aux_perda * 0.3;
         var revert_45per = 4 * aux_perda * 0.45;
