@@ -105,9 +105,9 @@
                      seus hectares, o que indica que você tende a perder
                       R$<b id="b_aux_perda"></b> reais em receita bruta.<br><br>
                     Contudo, essa possível perda pode ser controlada com a
-                    nossa tecnologia, revertendo esse prejuízo em 30%, totalizando uma receita de R$<b id="b_valor_total"></b> reais
+                    nossa tecnologia, revertendo esse prejuízo em 20% de lucro na sua primeira safra R$<b id="b_valor_total"></b> reais
                     </p>
-                    <h1>Projeção para anos futuros com <b id="b_porcentagem2"></b>% de perda</h1>
+                    <h1>Projeção para anos futuros:</h1>
 
                     <!-- INICIO DO GRÁFICO -->
                     <div class="graficos" >
@@ -115,7 +115,6 @@
                             <canvas id="grafico"></canvas>
                         </div>
                     </div>
-
 
                     <button onclick="retornar()">Fazer outra simulação</button>
                 </div>
@@ -218,33 +217,34 @@
         b_pesoDivHectar.innerHTML = `${(pesoArrobasAmostras / hectares).toFixed(2)}`
         b_aux_perda.innerHTML = `${aux_perda.toFixed(2)}`
         b_porcentagem.innerHTML = `${porcentagem}`
-        b_porcentagem2.innerHTML = `${porcentagem}`
+
+        b_valor_total.innerHTML = `${(valor_total-(aux_perda*0.8)).toFixed(2)}`
         
-        var revert_30per = 2 * aux_perda * 0.3;
-        var revert_45per = 4 * aux_perda * 0.45;
-        var revert_55per = 7 * aux_perda * 0.59;
-        var revert_68per = 10 * aux_perda * 0.68;
+        var valor_totalPerda =  valor_total * (porcentagem / 100);
+        var total_2Safras = 2 * valor_totalPerda;
+        var total_4Safras = 4 * valor_totalPerda;
+        var total_7Safras = 7 * valor_totalPerda;
+        var total_10Safras = 10 * valor_totalPerda;
+
+        var revert_30per =  total_2Safras + (2 * (aux_perda * 0.7));
+        var revert_45per = total_4Safras + (4 * aux_perda * 0.55);
+        var revert_59per = total_7Safras + (7 * aux_perda * 0.41);
+        var revert_68per = total_10Safras + (10 * aux_perda * 0.32);
         
-        var total_2Safras = 2 * aux_perda;
-        var total_4Safras = 4 * aux_perda;
-        var total_7Safras = 7 * aux_perda;
-        var total_10Safras = 10 * aux_perda;
-        
-        b_valor_total.innerHTML = `${(valor_total-revert_30per).toFixed(2)}`
 
         /*INICIO GRÁFICO*/
 
         var Valor_Revertido = {
         
-            label: 'Com a CottonAnalytics',
+            label: 'Lucro com o Cotton M20',
             backgroundColor: 'rgb(0,255,0)',
             boderColor: 'green',
-            data: [(total_2Safras-revert_30per).toFixed(2), (total_4Safras-revert_45per).toFixed(2),(total_7Safras-revert_55per).toFixed(2),(total_10Safras-revert_68per).toFixed(2)],
+            data: [revert_30per.toFixed(2), revert_45per.toFixed(2),revert_59per.toFixed(2),revert_68per.toFixed(2)],
         };
     
         var Valor_Perdido ={
 
-            label: 'Sem a CottonAnalytics',
+            label: 'Lucro sem o Cotton M20',
             backgroundColor: 'rgb(255,0,0)',
             boderColor: 'red',
             data:[total_2Safras.toFixed(2), total_4Safras.toFixed(2), total_7Safras.toFixed(2), total_10Safras.toFixed(2)],
@@ -256,6 +256,7 @@
             datasets: [Valor_Perdido, Valor_Revertido]
         };
 
+    
 
     const config = {
         type: 'line',
@@ -267,5 +268,5 @@
         document.getElementById('grafico'),
         config
         );
-    }
+}
 </script>
