@@ -101,11 +101,12 @@
                     Na sua última <b>safra</b> você teve a colheita de <b id="b_pesoArrobasAmostras"></b> @ de
                     algodão, 
 
-                    isso corresponde a uma média<b id="b_pesoDivHectar"></b>@ produzidos em cada um dos
+                    isso corresponde a uma média de <b id="b_pesoDivHectar"></b>@ produzidos em cada um dos
                      seus hectares, o que indica que você tende a perder
                       R$<b id="b_aux_perda"></b> reais em receita bruta.<br><br>
                     Contudo, essa possível perda pode ser controlada com a
-                    nossa tecnologia, revertendo esse prejuízo em 20% de lucro na sua primeira safra R$<b id="b_valor_total"></b> reais
+                    nossa tecnologia, revertendo esse prejuízo em 20% de lucro na sua primeira safra totalizando R$<b id="b_valor_total"></b> reais na sua 
+                    receita bruta.
                     </p>
                     <h1>Projeção para anos futuros:</h1>
 
@@ -238,7 +239,7 @@
         
             label: 'Lucro com o Cotton M20',
             backgroundColor: 'rgb(0,255,0)',
-            boderColor: 'green',
+            borderColor: 'lightgreen',
             data: [revert_30per.toFixed(2), revert_45per.toFixed(2),revert_59per.toFixed(2),revert_68per.toFixed(2)],
         };
     
@@ -246,14 +247,24 @@
 
             label: 'Lucro sem o Cotton M20',
             backgroundColor: 'rgb(255,0,0)',
-            boderColor: 'red',
+            borderColor: 'red',
             data:[total_2Safras.toFixed(2), total_4Safras.toFixed(2), total_7Safras.toFixed(2), total_10Safras.toFixed(2)],
         };
 
 
         var speedData = {
             labels: ['2 Safras','4 Safras','7 Safras','10 Safras',],
-            datasets: [Valor_Perdido, Valor_Revertido]
+            datasets: [Valor_Perdido, Valor_Revertido],
+            options: {
+                dataset: {
+                    labels: {
+                        font: {
+                        size: 16,
+                        weight: 'bold',
+                              }
+                            }
+                }
+            }
         };
 
     
@@ -261,8 +272,20 @@
     const config = {
         type: 'line',
         data: speedData,
-        options: {}
-    };
+
+        options: {
+            plugins: {
+                legend: {
+                    labels: {
+                        font: {
+                        size: 16,
+                        weight: 'bold',
+                              }
+                            }
+                        }
+                     }
+                 }    
+             };
 
     const grafico = new Chart(
         document.getElementById('grafico'),
