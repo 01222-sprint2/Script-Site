@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hectares</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&family=Leckerli+One&family=Montserrat:wght@500;600;700&family=Questrial&family=Quicksand:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/2.0.1/chartjs-plugin-annotation.min.js"
+        integrity="sha512-LZEOcU8s74hwWva82MJux7GgFNjfeExXG9yZPQrKz567Od4O2D/6UX3oGoZiRDOdbMtH33NBq7vonH4VOUPA/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="header">
+        <div class="container">
+            <div class="nome_Empresa">
+                <span id="span1">Cotton</span>
+                <span id="span2">Analytics</span>
+            </div>
+            <ul class="navbar">
+                <li><a href="">Fazendas</a></li>
+                <li class="agora">Hectares</li>
+                <li><a href="">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- HEADER -->
+
+    <!-- INÍCIO DAS SECTIONS -->
+    <div class="sections">
+        <div class="graphsmenu">
+            <div class="topsection">
+                <div class="metricas2">
+                    <span>Temperatura</span>
+                    <img src="assets/tempmetrics.png">
+                    <span>Umidade</span>
+                    <img src="assets/umidmetrics.png">
+                </div>
+                <ul class="metricas1">
+                    <img src="assets/alertmetrics.png">
+                </ul>
+            </div>
+            <div class="graphs">
+                <h2 class="titleblue">Hectare A - Fazenda A</h2>
+                <div class="big">
+                    <div class="divisoes">
+                        <h3 class="orange">TEMPERATURA</h3>
+                        <div class="graficos">
+                            <div class="grafico">
+                                <canvas id="temp_atual"></canvas>
+                            </div>
+                            <div class="grafico">
+                                <canvas id="temp_semana"></canvas>
+                            </div>
+                        </div>
+                        <div class="texto">
+                            <span class="central">O <span class="red">Hectare A</span> entrou no estado
+                                <span>crítico</span>.</span>
+                            <br><span>Temperatura atingiu
+                                20°C, que está abaixo do ideal. <br>
+                                O problema está no <span class="red">setor 1</span></span>
+                        </div>
+                        <div class="minmaxbarra">
+                            <div class="minmax">
+                                <span>Temperatura máxima e mínima <br>atual do Hectare</span>
+                                <div class="imgMedida">
+                                    <img src="assets/max.png"><span>27°C</span>
+                                </div>
+                                <div class="imgMedida">
+                                    <img src="assets/min.png"><span>20°C</span>
+                                </div>
+                            </div>
+                            <div class="graf_setores">
+                                <canvas id="barra_tempSetor"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divisoes">
+                        <h3 class="blue">UMIDADE</h3>
+                        <div class="graficos">
+                            <div class="grafico">
+                                <canvas id="umid_atual"></canvas>
+                            </div>
+                            <div class="grafico">
+                                <canvas id="umid_semana"></canvas>
+                            </div>
+                        </div>
+                        <span>Está tudo bem com o Hectare A em relação a umidade</span>
+                        <div class="minmaxbarra">
+                            <div class="minmax">
+                                <span>Temperatura Máxima e <br>Mínima Diária do Hectare</span>
+                                <div class="imgMedida">
+                                    <img src="assets/max.png"><span>10%</span>
+                                </div>
+                                <div class="imgMedida">
+                                    <img src="assets/min.png"><span>09%</span>
+                                </div>
+                            </div>
+                            <div class="graf_setores">
+                                <canvas id="barra_umidSetor"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="container">
+            <div class="logo">
+                <span id="span1">Cotton</span>
+                <span id="span2">Analytics</span>
+            </div>
+            <ul class="navbar">
+                <li class="">Home</li>
+                <li><a href="Serviços.html">Solução IoT</a></li>
+                <li><a href="Simulador.html">Simulador</a></li>
+                <li><a href="">Logout</a></li>
+            </ul>
+            <span id="span3">suport.cotton_analytics@gmail.com</span>
+        </div>
+    </div>
+    <!-- FOOTER -->
+</body>
+
+</html>
+
+<script>
+
+    // GRÁFICO LINHA - TEMPERATURA ATUAL
+    const label_horarioAtual = [
+        '12:00',
+        '13:00',
+        '14:00',
+        '15:00',
+        '16:00',
+        '17:00',
+    ];
+
+    const data_tempAtual = {
+        labels: label_horarioAtual,
+        datasets: [{
+            label: 'Temperatura Média',
+            backgroundColor: 'rgb(255, 0, 0)',
+            borderColor: 'rgb(255, 0, 0)',
+            data: [27, 26, 25, 25, 23, 20],
+        }]
+    };
+
+    const cfg_tempAtual = {
+        type: 'line',
+        data: data_tempAtual,
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    suggestedMax: 40,
+                    min: 10
+                }
+            },
+            plugins: {
+                autocolors: false,
+                annotation: {
+                    common: {
+                        drawTime: 'beforeDatasetsDraw'
+                    },
+                    annotations: {
+                        idealBar: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 23,
+                            yMax: 27,
+                            borderColor: 'rgba(0, 255, 0, 0.35)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(0, 255, 0, 0.35)'
+                        },
+                        alerta: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 21,
+                            yMax: 23,
+                            borderColor: 'rgba(255, 255, 0, 0.35)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 255, 0, 0.35)'
+                        },
+                        alerta2: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 27,
+                            yMax: 29,
+                            borderColor: 'rgba(255, 255, 0, 0.35)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 255, 0, 0.35)'
+                        },
+                        alerta3: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 21,
+                            yMax: -10,
+                            borderColor: 'rgba(255, 255, 0, 0.27)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 0, 0, 0.27)'
+                        },
+                        alerta4: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 29,
+                            yMax: 49,
+                            borderColor: 'rgba(255, 255, 0, 0.27)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 0, 0, 0.27)'
+                        }
+                    }
+                }
+            }
+        }
+    };
+
+
+    // GRÁFICO LINHA - TEMPERATURA MÉDIA DOS DIAS DA SEMANA
+    const label_diaSemana = [
+        'Segunda',
+        'Terça',
+        'Quarta',
+        'Quinta',
+        'Sexta',
+        'Sábado',
+        'Hoje'
+    ];
+
+    const data_tempSemana = {
+        labels: label_diaSemana,
+        datasets: [{
+            label: 'Temperatura Média dos dias da Semana',
+            backgroundColor: 'rgb(255, 0, 0)',
+            borderColor: 'rgb(255, 0, 0)',
+            data: [25, 29, 28, 25, 22, 23, 24],
+        }]
+    };
+
+    const cfg_tempSemana = {
+        type: 'line',
+        data: data_tempSemana,
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    suggestedMax: 40,
+                    min: 10
+                }
+            },
+            plugins: {
+                autocolors: false,
+                annotation: {
+                    common: {
+                        drawTime: 'beforeDatasetsDraw'
+                    },
+                    annotations: {
+                        idealBar: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 23,
+                            yMax: 27,
+                            borderColor: 'rgba(0, 255, 0, 0.35)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(0, 255, 0, 0.35)'
+                        },
+                        alerta: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 21,
+                            yMax: 23,
+                            borderColor: 'rgba(255, 255, 0, 0.35)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 255, 0, 0.35)'
+                        },
+                        alerta2: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 27,
+                            yMax: 29,
+                            borderColor: 'rgba(255, 255, 0, 0.35)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 255, 0, 0.35)'
+                        },
+                        alerta3: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 21,
+                            yMax: -10,
+                            borderColor: 'rgba(255, 255, 0, 0.27)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 0, 0, 0.27)'
+                        },
+                        alerta4: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 29,
+                            yMax: 49,
+                            borderColor: 'rgba(255, 255, 0, 0.27)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 0, 0, 0.27)'
+                        }
+                    }
+                }
+            }
+        }
+    };
+
+    // GRAFICO BARRA - Temperatura MAX e MIN por Setor
+    const label_setor = [
+        'Setor 1',
+        'Setor 2',
+        'Setor 3',
+        'Setor 4',
+        'Setor 5'
+    ];
+
+    const data_maxMinTemp = {
+        labels: label_setor,
+        datasets: [{
+            label: 'Temp Máx',
+            backgroundColor: '#F91A1A',
+            borderColor: 'rgba(255, 0, 0, 0.8)',
+            data: [25, 24, 27, 26, 25],
+        },
+        {
+            label: 'Temp Min',
+            backgroundColor: 'rgba(255, 0, 0, 0.4)',
+            borderColor: 'rgba(255, 0, 0, 0.4)',
+            data: [25, 24, 24, 23, 20],
+        }]
+    };
+
+    const cfg_maxMinTemp = {
+        type: 'bar',
+        data: data_maxMinTemp,
+        options: {
+            maintainAspectRatio: false
+        }
+    };
+
+    // GRÁFICO LINHA - UMIDADE ATUAL
+    const data_umidAtual = {
+        labels: label_horarioAtual,
+        datasets: [{
+            label: 'Umidade Atual',
+            backgroundColor: 'rgb(255, 0, 0)',
+            borderColor: 'rgb(255, 0, 0)',
+            data: [10, 9, 9, 10, 9, 10, 10],
+        }]
+    };
+
+    const cfg_umidAtual = {
+        type: 'line',
+        data: data_umidAtual,
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    suggestedMax: 25,
+                    min: 0
+                }
+            },
+            plugins: {
+                autocolors: false,
+                annotation: {
+                    common: {
+                        drawTime: 'beforeDatasetsDraw'
+                    },
+                    annotations: {
+                        idealBar: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 9,
+                            yMax: 10,
+                            borderColor: 'rgba(0, 255, 0, 0.35)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(0, 255, 0, 0.35)'
+                        },
+                        alerta: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 9,
+                            yMax: 7.5,
+                            borderColor: 'rgba(255, 255, 0, 0.35)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 255, 0, 0.35)'
+                        },
+                        alerta2: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 10,
+                            yMax: 11.5,
+                            borderColor: 'rgba(255, 255, 0, 0.35)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 255, 0, 0.35)'
+                        },
+                        alerta3: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 11.5,
+                            yMax: 50,
+                            borderColor: 'rgba(255, 255, 0, 0.27)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 0, 0, 0.27)'
+                        },
+                        alerta4: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 7.5,
+                            yMax: -10,
+                            borderColor: 'rgba(255, 255, 0, 0.27)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 0, 0, 0.27)'
+                        }
+                    }
+                }
+            }
+        }
+    };
+
+    // GRÁFICO LINHA - UMIDADE MÉDIA DOS DIAS DA SEMANA
+    const data_umidSemana = {
+        labels: label_diaSemana,
+        datasets: [{
+            label: 'Umidade Média dos dias da Semana (%)',
+            backgroundColor: 'rgb(255, 0, 0)',
+            borderColor: 'rgb(255, 0, 0)',
+            data: [7, 12, 11, 10, 8, 9, 9],
+        }]
+    };
+
+    const cfg_umidSemana = {
+        type: 'line',
+        data: data_umidSemana,
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    suggestedMax: 25,
+                    min: 0
+                }
+            },
+            plugins: {
+                autocolors: false,
+                annotation: {
+                    common: {
+                        drawTime: 'beforeDatasetsDraw'
+                    },
+                    annotations: {
+                        idealBar: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 9,
+                            yMax: 10,
+                            borderColor: 'rgba(0, 255, 0, 0.35)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(0, 255, 0, 0.35)'
+                        },
+                        alerta: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 9,
+                            yMax: 7.5,
+                            borderColor: 'rgba(255, 255, 0, 0.35)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 255, 0, 0.35)'
+                        },
+                        alerta2: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 10,
+                            yMax: 11.5,
+                            borderColor: 'rgba(255, 255, 0, 0.35)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 255, 0, 0.35)'
+                        },
+                        alerta3: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 11.5,
+                            yMax: 50,
+                            borderColor: 'rgba(255, 255, 0, 0.27)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 0, 0, 0.27)'
+                        },
+                        alerta4: {
+                            type: 'box',
+                            drawTime: 'beforeDraw',
+                            yMin: 7.5,
+                            yMax: -10,
+                            borderColor: 'rgba(255, 255, 0, 0.27)',
+                            borderWidth: 1,
+                            backgroundColor: 'rgba(255, 0, 0, 0.27)'
+                        }
+                    }
+                }
+            }
+        }
+    };
+
+    // GRAFICO BARRA - Umidade MAX e MIN por Setor
+    const data_maxMinUmid = {
+        labels: label_setor,
+        datasets: [{
+            label: 'Umid Máx',
+            backgroundColor: '#F91A1A',
+            borderColor: 'rgba(255, 0, 0, 0.8)',
+            data: [9, 9, 10, 10, 10],
+        },
+        {
+            label: 'Umid Min',
+            backgroundColor: 'rgba(255, 0, 0, 0.4)',
+            borderColor: 'rgba(255, 0, 0, 0.4)',
+            data: [9, 9, 9, 10, 10],
+        }]
+    };
+
+    const cfg_maxMinUmid = {
+        type: 'bar',
+        data: data_maxMinUmid,
+        options: {
+            maintainAspectRatio: false
+        }
+    };
+
+</script>
+
+<script>
+    const linha_tempAtual = new Chart(
+        document.getElementById('temp_atual'),
+        cfg_tempAtual
+    );
+
+    const linha_mediaSemanal = new Chart(
+        document.getElementById('temp_semana'),
+        cfg_tempSemana
+    );
+
+    const linha_umidAtual = new Chart(
+        document.getElementById('umid_atual'),
+        cfg_umidAtual
+    );
+
+    const linha_umidSemana = new Chart(
+        document.getElementById('umid_semana'),
+        cfg_umidSemana
+    );
+
+    const barra_maxMinTempSetor = new Chart(
+        document.getElementById('barra_tempSetor'),
+        cfg_maxMinTemp
+    );
+
+    const barra_maxMinUmidSetor = new Chart(
+        document.getElementById('barra_umidSetor'),
+        cfg_maxMinUmid
+    );
+
+    // const teste = new Chart(
+    //     document.getElementById('teste'),
+    //     config
+    // );
+
+    // const umidadeSemana = new Chart(
+    //     document.getElementById('umidadeSemana'),
+    //     cfgUmidade2
+    // );
+</script>

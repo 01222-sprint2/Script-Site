@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard 3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Montserrat:wght@500&family=Quicksand&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/2.0.1/chartjs-plugin-annotation.min.js"
+        integrity="sha512-LZEOcU8s74hwWva82MJux7GgFNjfeExXG9yZPQrKz567Od4O2D/6UX3oGoZiRDOdbMtH33NBq7vonH4VOUPA/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="nome_Empresa">
+                <span id="span1">Cotton</span>
+                <span id="span2">Analytics</span>
+            </div>
+            <ul class="navbar">
+                <li class="agora">Home</li>
+                <li>Fazenda</li>
+                <li>Hectares</li>
+                <li>Sensores</li>
+                <li>Logout</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="maior">
+        <div class="full_section">
+            <div class="left_section">
+                <div class="user">
+                    <img src="https://moodle.sptech.school/pluginfile.php/1/core_admin/logo/0x150/1643201436/bkg_01_moodle.png"
+                        alt="">
+                    <span>NOME USUÁRIO</span>
+                </div>
+                <!-- <div class="menus"> -->
+                <ul class="menus">
+                    <li>
+                        Fazendas
+                    </li>
+                    <li>
+                        Hectares
+                    </li>
+                    <li>
+                        Sensores
+                    </li>
+                    <li>
+                        Média Diária
+                    </li>
+                    <li>
+                        Média Semanal
+                    </li>
+                    <li>
+                        Média Mensal
+                    </li>
+                </ul>
+                <!-- </div> -->
+            </div>
+            <div class="right_section">
+                <div class="top_section">
+                    <ul class="indicadores">
+                        <li><img src="assets/green.png">Ideal</li>
+                        <li><img src="assets/yellow.png">Alerta</li>
+                        <li><img src="assets/orange.png">Emergência</li>
+                        <li><img src="assets/red.png">Crítico</li>
+                    </ul>
+                </div>
+                <div class="sensor_section">
+                    <h1>Sensores</h1>
+                    <div class="sensor_menus">
+                        <h3>Sensor 1</h3>
+                        <div class="menu">
+                            <div class="sensores">
+                                <canvas id="sens1temp" class="grafico"></canvas>
+                                <span>O sensor x entrou em estado crítico em relação à temperatura</span>
+                            </div>
+                            <div class="sensores">
+                                <canvas id="sens1umid" class="grafico"></canvas>
+                                <span>O sensor x entrou em estado crítico em relação à temperatura</span>
+                            </div>
+                        </div>
+                        <div class="menu">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="logo">
+                <span id="span1">Cotton</span>
+                <span id="span2">Analytics</span>
+            </div>
+            <ul class="navbar">
+                <li class="agora">Home</li>
+                <li>Solução IoT</li>
+                <li>Simulador</li>
+                <li>Login</li>
+                <li>|</li>
+                <li>Cadastro</li>
+            </ul>
+            <span id="span3">suport.cotton_analytics@gmail.com</span>
+            <!-- <div>
+                    Redes Sociais:
+                    <div class="redes">
+                    <img src="assets/facebook.png" alt="facebook" width="32px">
+                    <img src="assets/instagram.png" alt="Instagram" width="32px">
+                    <img src="assets/twitter.png" alt="Twitter" width="32px">
+                    </div>
+                </div> -->
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const labels = [
+        '12:00',
+        '13:00',
+        '14:00',
+        '15:00',
+        '16:00',
+        '17:00',
+    ];
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Temperatura',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [30, 29, 28, 25, 22, 23],
+        }]
+    };
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+            plugins: {
+                autocolors: false,
+                annotation: {
+                    common: {
+                        drawTime: 'beforeDatasetsDraw'
+                    },
+                    annotations: {
+                        ideal1: {
+                            type: 'line',
+                            yMin: 23,
+                            yMax: 23,
+                            borderColor: 'rgba(0, 255, 0, 1)'
+                        },
+                        ideal2: {
+                            type: 'line',
+                            yMin: 27,
+                            yMax: 27,
+                            borderColor: 'rgba(0, 255, 0, 1)'
+                        },
+                        alerta1: {
+                            type: 'line',
+                            yMin: 22,
+                            yMax: 22,
+                            borderColor: 'rgba(255, 255, 0, 1)'
+                        },
+                        alerta2: {
+                            type: 'line',
+                            yMin: 28,
+                            yMax: 28,
+                            borderColor: 'rgba(255, 255, 0, 1)'
+                        },
+                        emergencia1: {
+                            type: 'line',
+                            yMin: 21,
+                            yMax: 21,
+                            borderColor: 'rgba(255, 165, 0, 1)'
+                        },
+                        emergencia2: {
+                            type: 'line',
+                            yMin: 29,
+                            yMax: 29,
+                            borderColor: 'rgba(255, 165, 0, 1)'
+                        },
+                        critico1: {
+                            type: 'line',
+                            yMin: 20,
+                            yMax: 20,
+                            borderColor: 'rgba(255, 0, 0, 1)'
+                        },
+                        critico2: {
+                            type: 'line',
+                            yMin: 30,
+                            yMax: 30,
+                            borderColor: 'rgba(255, 0, 0, 1)'
+                        },
+                    }
+                }
+            }
+        }
+    };
+
+    const labels2 = [
+        '12:00',
+        '13:00',
+        '14:00',
+        '15:00',
+        '16:00',
+        '17:00',
+    ];
+
+    const data2 = {
+        labels: labels2,
+        datasets: [{
+            label: 'Temperatura',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [6, 4, 9, 12, 7, 8],
+        }]
+    };
+
+    const config2 = {
+        type: 'line',
+        data: data2,
+        options: {
+            plugins: {
+                autocolors: false,
+                annotation: {
+                    common: {
+                        drawTime: 'beforeDatasetsDraw'
+                    },
+                    annotations: {
+                        ideal1: {
+                            type: 'line',
+                            yMin: 9,
+                            yMax: 9,
+                            borderColor: 'rgba(0, 255, 0, 1)'
+                        },
+                        ideal2: {
+                            type: 'line',
+                            yMin: 10,
+                            yMax: 10,
+                            borderColor: 'rgba(0, 255, 0, 1)'
+                        },
+                        emergencia1: {
+                            type: 'line',
+                            yMin: 8,
+                            yMax: 8,
+                            borderColor: 'rgba(255, 165, 0, 1)'
+                        },
+                        emergencia2: {
+                            type: 'line',
+                            yMin: 11,
+                            yMax: 11,
+                            borderColor: 'rgba(255, 165, 0, 1)'
+                        },
+                        critico1: {
+                            type: 'line',
+                            yMin: 7,
+                            yMax: 7,
+                            borderColor: 'rgba(255, 0, 0, 1)'
+                        },
+                        critico2: {
+                            type: 'line',
+                            yMin: 12,
+                            yMax: 12,
+                            borderColor: 'rgba(255, 0, 0, 1)'
+                        },
+                    }
+                }
+            }
+        }
+    };
+</script>
+
+<script>
+    const g1 = new Chart(
+        document.getElementById('sens1temp'),
+        config
+    );
+
+    const g2 = new Chart(
+        document.getElementById('sens1umid'),
+        config2
+    );
+</script>

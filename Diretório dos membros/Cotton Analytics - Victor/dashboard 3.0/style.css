@@ -1,0 +1,355 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #FFFFFF;
+}
+
+
+/* ######################################################## INÍCIO DO HEADER ########################################################## */
+.header {
+    background-color: #0D7980;
+    height: 70px;
+    color: #ffffff;
+}
+
+/* Respiro da Página, margin auto para o sistema do pc que decidir como fica a alteração */
+.container {
+    margin: auto;
+    width: 80%;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.nome_Empresa {
+    display: flex;
+}
+
+.nome_Empresa #span1 {
+    font-family: 'Quicksand';
+    font-size: 26px;
+    font-weight: 700;
+    align-self: center;
+}
+
+.nome_Empresa #span2 {
+    font-family: 'Leckerli One', cursive;
+    font-size: 26px;
+    font-weight: 700;
+    align-self: center;
+}
+
+.header .navbar {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    margin-top: 24px;
+    width: 700px;
+    color: #FFFFFF;
+
+}
+
+.navbar .agora {
+    font-weight: 1000;
+    color: #000;
+}
+
+.navbar a {
+   color: #FFFFFF;
+   text-decoration: none;
+}
+/* ######################################################## FIM DO HEADER ########################################################## */
+
+
+
+/* ########################################################## INÍCIO DAS SECTIONS ############################################################ */
+.sections span {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 100%;
+    align-self: center;
+    /* margin-top: 15px; */
+}
+
+.sections {
+    /* border: solid 5px green; */
+    height: 1900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* ###################################################### INICIO MENU DOS GRÁFICOS ###################################################### */
+.graphsmenu {
+    display: flex;
+    flex-direction: column;
+    /* border: solid 5px blue; */
+    width: 80%;
+}
+
+/* ###################################################### INÍCIO MÉTRICAS DOS ALERTAS ###################################################### */
+.topsection {
+    /* border: solid 4px slateblue; */
+    display: flex;
+    flex-direction: column;
+    height: 245px;
+}
+
+.metricas1 {
+    /* border: solid 5px gold; */
+    /* display: flex; */
+    width: auto;
+    align-self: center;
+    /* margin: auto; */
+    /* margin-top: 1%; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.metricas1 img {
+    /* border: solid 4px orange; */
+    /* max-width: 70%; */
+    /* margin-top: 20px; */
+    /* width: 450px; */
+    height: 65%;
+}
+
+.metricas2 {
+    /* border: solid 5px darkcyan; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.metricas2 img {
+    align-self: center;
+    max-height: 50%;
+    max-width: 50%;
+    width: 100%;
+    height: auto;
+    /* width: 45%;
+    height: 45%; */
+    margin: 15px 0;
+}
+/* ###################################################### FIM MÉTRICAS DOS ALERTAS ###################################################### */
+
+
+/* ###################################################### INÍCIO GRÁFICOS/TEMPERATURA/UMIDADE ###################################################### */
+.graphs {
+    /* border: solid 5px darkturquoise; */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.big {
+    /* border: solid 2px #FD6A2B; */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.divisoes {
+    border: solid 1px rgb(13, 121, 128);
+    box-shadow: -13px 15px rgba(13, 121, 128, 0.3);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 86%;
+    /* height: 700px; */
+    align-self: center;
+    /* margin-bottom: 4%; */
+    /* margin-top: 2%; */
+}
+
+.graphs h2 {
+    /* border: solid 4px purple; */
+    font-size: 210%;
+    font-family: 'Cairo';
+    align-self: center;
+    /* margin-block-start: 0em; */
+    margin-block-end: 0em;
+}
+
+.graphs h3 {
+    /* border: solid 4px purple; */
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-size: 190%;
+    font-family: 'Quicksand';
+    align-self: center;
+}
+
+.graficos {
+    /* border: solid 4px red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 250px;
+    
+}
+
+.grafico {
+    /* border: solid 2px aqua; */
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    /* align-self: center; */
+    /* position: relative; */
+}
+
+.texto {
+    /* border: solid 5px orange; */
+    align-self: center;
+    /* height: 300px; */
+    margin-top: 2%;
+    text-align: center;
+}
+
+.texto .central {
+    align-self: center;
+    /* border: solid 2px #000; */
+}
+
+.graphs span {
+    /* border: solid 2px chartreuse; */
+    align-self: center;
+    margin-top: 3%;
+}
+
+.minmaxbarra {
+    /* border: solid 4px cornflowerblue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 45%;
+    width: 84%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+.minmax {
+    /* border: solid 2px black; */
+    display: flex;
+    flex-direction: column;
+    /* height: 40%; */
+}
+
+
+.imgMedida {
+    /* border: solid 2px black; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.imgMedida img {
+    /* border: solid 2px black; */
+    margin-right: 3%;
+}
+
+.imgMedida span {
+    font-family: 'Cairo';
+    font-size: 25px;
+}
+
+.graf_setores {
+    /* border: solid 2px black; */
+    position: relative;
+    width: 45vh;
+    height: 25vh;
+}
+
+.red {
+    color: #F91A1A;
+}
+
+.orange {
+    color: #FD6A2B;
+}
+
+.titleblue {
+    color: #0D7980;
+}
+
+.blue {
+    color: #002A96;
+}
+
+/* ###################################################### FIM GRAFICOS/TEMPERATURA/UMIDADE ###################################################### */
+
+/* ########################################################## FIM SECTIONS ############################################################ */
+
+
+
+/* ######################################### FOOTER ############################################### */
+.footer {
+    color: #fff;
+    background-color: #0D7980;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 125px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+/* .footer .contato {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 800px;
+} */
+
+.logo #span1 {
+    font-family: 'Quicksand';
+    font-size: 26px;
+    font-weight: 700;
+    align-self: center;
+}
+
+.logo #span2 {
+    font-family: 'Leckerli One', cursive;
+    font-size: 26px;
+    font-weight: 700;
+    align-self: center;
+}
+
+.footer .container .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 16px;
+    list-style: none;
+    width: 700px;
+    color: #FFFFFF;
+}
+
+.footer .container #span3 {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 16px;
+}

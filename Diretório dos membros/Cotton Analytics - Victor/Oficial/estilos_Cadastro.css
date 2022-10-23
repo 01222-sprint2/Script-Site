@@ -1,0 +1,223 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@900&family=Cairo&family=Questrial&family=Leckerli+One&family=Quicksand:wght@700&display=swap%27'); */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #000000;
+    background-image: url("assets/imagem_banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* tags responsáveis pelo efeito parallax e opacidade */
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.35);
+    background-blend-mode: color;
+
+}
+.header {
+    background-color: #0D7980;
+    height: 70px;
+    color: #ffffff;
+}
+
+/* Respiro da Página, margin auto para o sistema do pc que decidir como fica a alteração */
+.container {
+    margin: auto;
+    width: 80%;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.nome_Empresa {
+    display: flex;
+}
+
+.nome_Empresa a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.nome_Empresa #span1 {
+    font-family: 'Quicksand';
+    font-size: 26px;
+    font-weight: 700;
+
+    align-self: center;
+
+}
+
+.nome_Empresa #span2 {
+    font-family: 'Leckerli One', cursive;
+    font-size: 26px;
+    font-weight: 700;
+
+    align-self: center;
+}
+
+.header .navbar {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    margin-top: 24px;
+    width: 700px;
+    color: #FFFFFF;
+
+}
+
+.navbar .agora {
+    font-weight: 1000;
+    color: #000;
+}
+
+.navbar a {
+   color: #FFFFFF;
+   text-decoration: none;
+}
+
+
+/* ########################################################## BANNER ########################## */
+.banner {
+    height: 100%;
+}
+
+.banner .container {
+    display: flex;
+    justify-content: center;
+    height: 780px;
+}
+
+.form-cadas {
+    background: rgba(0, 0, 0, 0.6);
+    height: 600px;
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    padding-bottom: 50px;
+    background: rgba(35, 89, 89, 0.7);
+    border-radius: 10px;
+    margin-top: 5%;
+}
+
+
+.form-cadas h1 {
+    font-size: 230%;
+    text-align: center;
+    color: white;
+    font-family: 'Cairo';
+    font-weight: 600;
+}
+
+
+.formulario {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    height: 100%;
+    color: white;
+}
+
+.formulario input {
+    padding: 7px 10px;
+    width: 240px;
+    height: 30px;
+    font-family: 'Quicksand';
+    font-size: 20px;
+    border-style: none;
+    border-radius: 100px;
+    background: #19403C;
+    color: white;
+    border-radius: 8px;
+}
+
+.formulario input::placeholder {
+    color: rgb(255,255,255,0.6);
+    font-family: 'Quicksand';
+    /* font-size: 30px; */
+}
+
+button {
+    font-family: 'Cairo';
+    background-color: #A56037;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    height: 46px;
+    width: 164px;
+    font-size: 24px;
+    margin-top: 24px;
+}
+
+
+/* Rodapé */
+.footer {
+    color: #fff;
+    background-color: #0D7980;
+    justify-content: center;
+    align-items: center;
+}
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 125px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+/* .footer .contato {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 800px;
+} */
+.logo a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.logo #span1 {
+    font-family: 'Quicksand';
+    font-size: 26px;
+    font-weight: 700;
+    align-self: center;
+}
+
+.logo #span2 {
+    font-family: 'Leckerli One', cursive;
+    font-size: 26px;
+    font-weight: 700;
+    align-self: center;
+}
+
+.footer .container .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 16px;
+    list-style: none;
+    width: 700px;
+    color: #FFFFFF;
+}
+
+.footer .container #span3 {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 16px;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <h1>Calcule Aqui!</h1>
+    Informe o quanto você perde da sua colheita por hectare : <input class="input" type="text"
+        placeholder="em porcentagem" id="porcentagem_" autofocus>
+    <br><br>
+    Informe o faturamento por hectare : <input class="input" type="text" placeholder="em reais" id="faturamento_">
+    <br><br>
+    Informe o número de hectares da sua fazenda: <input class="input" type="text" id="hectares_">
+    <br><br>
+    <button onclick="calc()">Calcule o lucro da solução</button>
+
+
+    <div id="div_msg" class="msg"></div>
+
+</body>
+
+</html>
+<script>
+
+    function calc() {
+        /*menos7 = ao valor do input - 5% que é a perda natural = */
+        var menos7 = Number(porcentagem_.value) - 5
+        /*porcentagem = 50% de  da perda , é o que nós garantimos ao cliente */
+        var porcentagem = menos7 * 0.5
+
+        var faturamento = Number(faturamento_.value)
+        var hectares = Number(hectares_.value)
+        /*faturamento = quanto ele fatura em reais mais 50% sobre a perda, da nossa solução sobre a perda */
+
+        var faturamentoComSolucao = faturamento * (porcentagem / 100)
+
+        var ganho_hectare = faturamento + faturamentoComSolucao
+
+        var ganho_total =  ganho_hectare * hectares
+
+        var faturamento_sem = faturamento * hectares
+
+        var perdas = ganho_total - faturamento_sem
+
+
+        if ((porcentagem_.value != 0) && (faturamento != 0) && (hectares > 0)) {
+
+
+            if (porcentagem_.value > 5) {
+
+
+                if ((porcentagem_.value > 0) && (faturamento > 0) && (hectares > 0)) {
+              
+                    /*O lucro líquido obtido com algodão —descontados todos os custos, 
+                    inclusive financeiros e depreciações— soma R$ 2.900 por hectare.*/
+
+                    div_msg.innerHTML = `
+
+                   <br> O fungo chamado ramulária é um dos maiores inimigos da produção de algodão <br>
+                e é favorecido por condições de <b>alta umidade e em temperaturas entre 25℃ e 30℃</b>. <br>
+                Na safra 2019/2020, o fungo causou um prejuízo de R$ 1,89 bilhões ao setor <br>
+
+            
+
+            <h2>Com a solução Cotton M20!</h2>
+            
+            <p>Com o nosso monitoramento e tomadas de ação por conta do agricultor <br>
+                garantimos ${porcentagem.toFixed(2)}% a mais de aproveitamento de materia prima por hectare da sua colheita. <br>
+                   <br>
+
+                
+                Com isso, seu novo faturamento é de R$${ganho_hectare.toFixed(2)} por hectare, <br>
+                ou seja uma adição de 
+                50% em cima da sua porcentagem de perda <br>
+
+                Em toda sua safra você ganha R$${ganho_total.toFixed(2)} usando a nossa solução!</p>
+                
+                <h2>Redução de PERDAS!</h2>
+                
+                <p>Com a CottonAnalytics você deixa de perder R$${perdas.toFixed(2)} em toda sua safra !<br>
+                Se interessou? Entre em contato!</p>
+                    
+                <br><br><button>Fale Conosco</button>
+                </div>`
+                }
+
+            } else {
+                div_msg.innerHTML = `
+            <h2>A CottonAnalytics tem um compromisso com você!</h2>
+            
+            <p>Sua plantação de algodão tem uma ótima porcentagem de desenvolvimento, <br>
+                e nós vamos te ajudar a manter essa margem.<br>
+                Se interessou? Entre em contato!</p>
+            
+            <br><button>Fale Conosco</button>
+            </div>`}
+
+        } else { alert(`Preencha os campos corretamente`) }
+    }
+
+</script>
