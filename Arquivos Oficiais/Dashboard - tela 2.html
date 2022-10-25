@@ -31,7 +31,7 @@
             <ul class="navbar">
                 <li><a href="Dashboard - tela 1.html">Fazendas</a></li>
                 <li>|</li>
-                
+
                 <li><a href="Index.html">Logout</a></li>
             </ul>
         </div>
@@ -69,7 +69,8 @@
                             <span class="central">O <span class="red">Hectare A</span> entrou no estado
                                 <span>crítico</span>.</span>
                             <br><span>Temperatura atingiu
-                                20°C, que está abaixo do ideal. O problema está no <span class="red">setor 1</span></span>
+                                20°C, que está abaixo do ideal. O problema está no <span class="red">setor
+                                    1</span></span>
                         </div>
                         <div class="minmaxbarra">
                             <div class="minmax">
@@ -87,7 +88,8 @@
                         </div>
                         <div class="setor_significado">
                             <span><u>O que é Setor?</u></span>
-                            <div class="msg_setor">Em cada <b>setor</b> do seu hectare existem 2 <b>sensores</b> que fazem a captura da umidade e da temperatura.</div>
+                            <div class="msg_setor">Em cada <b>setor</b> do seu hectare existem 2 <b>sensores</b> que
+                                fazem a captura da umidade e da temperatura.</div>
                         </div>
                     </div>
                     <div class="divisoes">
@@ -117,7 +119,8 @@
                         </div>
                         <div class="setor_significado">
                             <span><u>O que é Setor?</u></span>
-                            <div class="msg_setor">Em cada <b>setor</b> do seu hectare existem 2 <b>sensores</b> que fazem a captura da umidade e da temperatura.</div>
+                            <div class="msg_setor">Em cada <b>setor</b> do seu hectare existem 2 <b>sensores</b> que
+                                fazem a captura da umidade e da temperatura.</div>
                         </div>
                     </div>
                 </div>
@@ -128,13 +131,13 @@
     <!-- FOOTER -->
     <div class="footer">
         <div class="container">
-            
+
             <div class="logo">
                 <span id="span1">Cotton</span>
                 <span id="span2">Analytics</span>
             </div>
-       
-            
+
+
             <span id="span3">suport.cotton_analytics@gmail.com</span>
         </div>
     </div>
@@ -159,7 +162,14 @@
         labels: label_horarioAtual,
         datasets: [{
             label: 'Temperatura em Tempo Real',
-            backgroundColor: 'rgb(13, 121, 128)',
+            backgroundColor: [
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(249, 26, 26, 0.9)',
+            ],
             borderColor: 'rgb(13, 121, 128)',
             data: [27, 26, 25, 25, 23, 20],
         }]
@@ -269,7 +279,15 @@
         labels: label_diaSemana,
         datasets: [{
             label: 'Temperatura Média dos dias da Semana',
-            backgroundColor: 'rgb(13, 121, 128)',
+            backgroundColor: [
+                'rgba(82, 255, 0)',
+                'rgba(253, 106, 43)',
+                'rgb(248, 213, 31)',
+                'rgba(82, 255, 0)',
+                'rgb(248, 213, 31)',
+                'rgba(82, 255, 0)',
+                'rgba(82, 255, 0)'
+            ],
             borderColor: 'rgb(13, 121, 128)',
             data: [25, 29, 28, 25, 22, 23, 24],
         }]
@@ -374,17 +392,25 @@
         labels: label_setor,
         datasets: [{
             label: 'Temp Máx',
-            backgroundColor: '#F91A1A',
-            data: [25, 24, 30],
+            data: [25, 24, 27],
+            backgroundColor: [
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(82, 255, 0, 0.9)'
+            ],
         },
         {
             label: 'Temp Min',
-            backgroundColor: 'rgba(82, 255, 0)',
-            data: [22, 24, 23],
+            data: [20, 23, 25],
+            backgroundColor: [
+                'rgba(249, 26, 26, 0.9)',
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(82, 255, 0, 0.9)',
+            ],
         }]
     };
 
-    
+
 
     const cfg_maxMinTemp = {
         type: 'bar',
@@ -399,7 +425,14 @@
         labels: label_horarioAtual,
         datasets: [{
             label: 'Umidade Atual',
-            backgroundColor: 'rgb(13, 121, 128)',
+            backgroundColor: [
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(82, 255, 0, 0.9)',
+            ],
             borderColor: 'rgb(13, 121, 128)',
             data: [10, 9, 9, 10, 9, 10, 10],
         }]
@@ -437,7 +470,7 @@
                             type: 'box',
                             drawTime: 'beforeDraw',
                             yMin: 9,
-                            yMax: 7.5,
+                            yMax: 7.6,
                             borderColor: 'rgba(255, 255, 0, 0.35)',
                             borderWidth: 1,
                             backgroundColor: 'rgba(255, 255, 0, 0.35)'
@@ -467,23 +500,23 @@
                             yMax: 12,
                             borderColor: 'rgba(253, 106, 43, 0.6)',
                             borderWidth: 0,
-                            backgroundColor: 'rgba(253, 106, 43, 0.6)'
+                            backgroundColor: 'rgba(253, 106, 43, 0.6)',
                         },
                         critico1: {
                             type: 'box',
                             drawTime: 'beforeDraw',
-                            yMin: 11.51,
+                            yMin: 12,
                             yMax: 50,
-                            borderColor: 'rgba(255, 255, 0, 0.27)',
+                            borderColor: 'rgba(255, 0, 0, 0.27)',
                             borderWidth: 1,
                             backgroundColor: 'rgba(255, 0, 0, 0.27)'
                         },
                         critico2: {
                             type: 'box',
                             drawTime: 'beforeDraw',
-                            yMin: 7.49,
+                            yMin: 6.99,
                             yMax: -10,
-                            borderColor: 'rgba(255, 255, 0, 0.27)',
+                            borderColor: 'rgba(255, 0, 0, 0.27)',
                             borderWidth: 1,
                             backgroundColor: 'rgba(255, 0, 0, 0.27)'
                         }
@@ -498,7 +531,15 @@
         labels: label_diaSemana,
         datasets: [{
             label: 'Umidade Média dos dias da Semana (%)',
-            backgroundColor: 'rgb(13, 121, 128)',
+            backgroundColor: [
+                'rgba(249, 26, 26, 0.9)',
+                'rgba(249, 26, 26, 0.9)',
+                'rgb(248, 213, 31)',
+                'rgba(82, 255, 0, 0.9)',
+                'rgb(248, 213, 31)',
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(82, 255, 0, 0.9)',
+            ],
             borderColor: 'rgb(13, 121, 128)',
             data: [7, 12, 11, 10, 8, 9, 9],
         }]
@@ -571,7 +612,7 @@
                         critico1: {
                             type: 'box',
                             drawTime: 'beforeDraw',
-                            yMin: 11.5,
+                            yMin: 12,
                             yMax: 50,
                             borderColor: 'rgba(255, 255, 0, 0.27)',
                             borderWidth: 1,
@@ -580,7 +621,7 @@
                         critico2: {
                             type: 'box',
                             drawTime: 'beforeDraw',
-                            yMin: 7.5,
+                            yMin: 7,
                             yMax: -10,
                             borderColor: 'rgba(255, 255, 0, 0.27)',
                             borderWidth: 1,
@@ -597,14 +638,20 @@
         labels: label_setor,
         datasets: [{
             label: 'Umid Máx',
-            backgroundColor: '#F91A1A',
-            borderColor: 'rgba(255, 0, 0, 0.8)',
+            backgroundColor: [
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(82, 255, 0, 0.9)',
+            ],
             data: [9, 9, 10, 10, 10],
         },
         {
             label: 'Umid Min',
-            backgroundColor: 'rgba(82, 255, 0)',
-            borderColor: 'rgba(255, 0, 0, 0.4)',
+            backgroundColor: [
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(82, 255, 0, 0.9)',
+                'rgba(82, 255, 0, 0.9)',
+            ],
             data: [9, 9, 9, 10, 10],
         }]
     };
