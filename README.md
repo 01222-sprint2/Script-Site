@@ -1,2 +1,2 @@
 # Script-Site
-Código do site estático e da calculadora financeira usada no projeto
+Código do site estático e da API usada no projeto.
